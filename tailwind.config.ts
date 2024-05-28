@@ -9,6 +9,24 @@ const config: Config = {
   ],
   presets: [require("@relume_io/relume-tailwind")],
   theme: {
+    fontSize: {
+      "5xl": [
+        "3rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "-0.4px",
+          fontWeight: "700",
+        },
+      ],
+      "6xl": [
+        "3.75rem",
+        {
+          lineHeight: "1",
+          letterSpacing: "-0.4px",
+          fontWeight: "900",
+        },
+      ],
+    },
     extend: {
       backgroundImage: {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
