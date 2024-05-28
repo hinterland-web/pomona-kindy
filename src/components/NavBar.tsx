@@ -86,7 +86,7 @@ export const Navbar1 = (props: Navbar1Props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="flex w-full items-center border-b border-border-primary bg-white lg:min-h-18 lg:px-[5%]">
+    <nav className="flex w-full items-center  bg-gradient-to-b from-base-100 to-base-200 lg:min-h-18 lg:px-[5%]">
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <img src={logo.src} alt={logo.alt} />
@@ -118,7 +118,10 @@ export const Navbar1 = (props: Navbar1Props) => {
           className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
           {links.map((link, index) => (
-            <div key={`${link.title}-${index}`} className="first:pt-4 lg:first:pt-0">
+            <div
+              key={`${link.title}-${index}`}
+              className="first:pt-4 lg:first:pt-0"
+            >
               {link.subLinks && link.subLinks.length > 0 ? (
                 <NavItemDropdown subLinks={link.subLinks} title={link.title} />
               ) : (
@@ -149,10 +152,19 @@ export const Navbar1 = (props: Navbar1Props) => {
   );
 };
 
-const NavItemDropdown = ({ title, subLinks }: { title: string; subLinks: LinkProps[] }) => {
+const NavItemDropdown = ({
+  title,
+  subLinks,
+}: {
+  title: string;
+  subLinks: LinkProps[];
+}) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
-    <nav onMouseEnter={() => setDropdownOpen(true)} onMouseLeave={() => setDropdownOpen(false)}>
+    <nav
+      onMouseEnter={() => setDropdownOpen(true)}
+      onMouseLeave={() => setDropdownOpen(false)}
+    >
       <button
         className="flex w-full items-center justify-between gap-2 py-3 text-left text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base"
         onClick={() => setDropdownOpen((prev) => !prev)}
@@ -218,27 +230,29 @@ export const Navbar1Defaults: Navbar1Props = {
     alt: "Logo image",
   },
   links: [
-    { title: "Link One", url: "#" },
-    { title: "Link Two", url: "#" },
-    { title: "Link Three", url: "#" },
     {
-      title: "Link Four",
+      title: "Our Kindy",
+      //url should send to features section
+
       url: "#",
       subLinks: [
-        { title: "Link Five", url: "#" },
-        { title: "Link Six", url: "#" },
-        { title: "Link Seven", url: "#" },
+        { title: "Teachers", url: "/teachers" },
+        { title: "Philosopy", url: "#" },
+        { title: "Parent Committee", url: "#" },
       ],
     },
+    { title: "Facilities", url: "/teachers" },
+    { title: "Getting Involved", url: "#" },
+    { title: "FAQ", url: "#" },
   ],
   buttons: [
+    // {
+    //   title: "Button",
+    //   variant: "secondary",
+    //   size: "sm",
+    // },
     {
-      title: "Button",
-      variant: "secondary",
-      size: "sm",
-    },
-    {
-      title: "Button",
+      title: "Get in Touch!",
       size: "sm",
     },
   ],
