@@ -1,10 +1,14 @@
 import Image from "next/image";
-import { Navbar11 } from "../../components/NavBar";
+import { Navbar1 } from "../components/NavBar";
+
+
 
 export default function Home() {
+  //@ts-ignore
   return (
     <>
-    <Navbar11/>
-    </>
-  );
+      <Navbar1 />
+    
+      </>
+  )
 }
