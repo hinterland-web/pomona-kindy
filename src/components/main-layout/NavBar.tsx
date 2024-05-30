@@ -179,12 +179,12 @@ const NavItemDropdown = ({
     };
   }, [dropdownRef]);
 
-  const handleSublinkClick =
-    (subLink: LinkProps) => (event: React.MouseEvent) => {
-      event.preventDefault();
-      window.location.href = subLink.url;
-      setDropdownOpen(false);
-    };
+  // const handleSublinkClick =
+  //   (subLink: LinkProps) => (event: React.MouseEvent) => {
+  //     event.preventDefault();
+  //     window.location.href = subLink.url;
+  //     setDropdownOpen(false);
+  //   };
 
   return (
     <nav ref={dropdownRef}>
@@ -225,7 +225,7 @@ const NavItemDropdown = ({
               },
             }}
             transition={{ duration: 0.3 }}
-            className="bg-white  lg:absolute lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
+            className="bg-white z-50 lg:absolute lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
           >
             {subLinks.map((subLink, index) => (
               <li
