@@ -1,18 +1,18 @@
-import Image from "next/image";
-import { Navbar1 } from "../components/NavBar";
-import { Header5 } from "@/components/Header";
-import { Layout423 } from "@/components/Features";
-import { Layout77 } from "@/components/Programme";
-import { Testimonial3 } from "@/components/Testimonials";
+import { Header5, Header5Defaults } from "@/components/homepage/Header";
+import { Layout423, Layout423Defaults } from "@/components/homepage/Features";
+import { Layout77, Layout77Defaults } from "@/components/homepage/Programme";
+import { Testimonial3, Testimonial3Defaults } from "../components/homepage/Testimonials";
+
 
 export default function Home() {
   //@ts-ignore
   return (
     <>
-      <Header5 />
-      <Layout423 />
-      <Layout77 />
-      <Testimonial3 />
+      
+      <Header5 {...Header5Defaults} />
+      <Layout423 {...Layout423Defaults} />
+      <Layout77 {...Layout77Defaults} />
+      <Testimonial3 {...Testimonial3Defaults} />
     </>
   );
 }

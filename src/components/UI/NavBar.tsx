@@ -1,10 +1,11 @@
 "use client";
-
-import { useState } from "react";
+import React from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@relume_io/relume-ui";
 import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { RxChevronDown } from "react-icons/rx";
+import Link from "next/link";
 
 type LinkProps = {
   title: string;
@@ -77,7 +78,7 @@ const dropDownVariants = {
   },
 };
 
-export const Navbar1 = (props: Navbar1Props) => {
+export const Navbar101 = (props: Navbar1Props) => {
   const { logo, links, buttons } = {
     ...Navbar1Defaults,
     ...props,
@@ -125,12 +126,12 @@ export const Navbar1 = (props: Navbar1Props) => {
               {link.subLinks && link.subLinks.length > 0 ? (
                 <NavItemDropdown subLinks={link.subLinks} title={link.title} />
               ) : (
-                <a
+                <Link
                   href={link.url}
                   className="relative mx-auto block py-3 text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 lg:py-2 lg:text-base"
                 >
                   {link.title}
-                </a>
+                </Link>
               )}
             </div>
           ))}
@@ -160,11 +161,33 @@ const NavItemDropdown = ({
   subLinks: LinkProps[];
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLUListElement>(null);
+
+  // close dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mouseup", handleClickOutside);
+    return () => {
+      document.removeEventListener("mouseup", handleClickOutside);
+    };
+  }, [dropdownRef]);
+
+  const handleSublinkClick =
+    (subLink: LinkProps) => (event: React.MouseEvent) => {
+      event.preventDefault();
+      window.location.href = subLink.url;
+      setDropdownOpen(false);
+    };
+
   return (
-    <nav
-      onMouseEnter={() => setDropdownOpen(true)}
-      onMouseLeave={() => setDropdownOpen(false)}
-    >
+    <nav ref={dropdownRef}>
       <button
         className="flex w-full items-center justify-between gap-2 py-3 text-left text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base"
         onClick={() => setDropdownOpen((prev) => !prev)}
@@ -187,8 +210,8 @@ const NavItemDropdown = ({
         <AnimatePresence>
           <motion.ul
             animate={dropdownOpen ? "open" : "close"}
-            initial="close"
-            exit="close"
+            initial="open"
+            exit="open"
             variants={{
               open: {
                 visibility: "visible",
@@ -202,19 +225,19 @@ const NavItemDropdown = ({
               },
             }}
             transition={{ duration: 0.3 }}
-            className="bg-white lg:absolute lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
+            className="bg-white  lg:absolute lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
           >
             {subLinks.map((subLink, index) => (
               <li
                 key={`${subLink.title}-${index}`}
                 className="relative mx-auto whitespace-nowrap py-3 pl-[5%] text-left align-top text-md lg:px-4 lg:py-2 lg:text-base"
               >
-                <a
+                <Link
                   href={subLink.url}
                   className="ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2"
                 >
                   {subLink.title}
-                </a>
+                </Link>
               </li>
             ))}
           </motion.ul>
@@ -232,25 +255,18 @@ export const Navbar1Defaults: Navbar1Props = {
   links: [
     {
       title: "Our Kindy",
-      //url should send to features section
-
       url: "#",
       subLinks: [
         { title: "Teachers", url: "/teachers" },
-        { title: "Philosopy", url: "#" },
+        { title: "Philosophy", url: "#" },
         { title: "Parent Committee", url: "#" },
       ],
     },
-    { title: "Facilities", url: "/teachers" },
+    { title: "Facilities", url: "/" },
     { title: "Getting Involved", url: "#" },
-    { title: "FAQ", url: "#" },
+    { title: "FAQ", url: "/faq" },
   ],
   buttons: [
-    // {
-    //   title: "Button",
-    //   variant: "secondary",
-    //   size: "sm",
-    // },
     {
       title: "Get in Touch!",
       size: "sm",
@@ -258,4 +274,6 @@ export const Navbar1Defaults: Navbar1Props = {
   ],
 };
 
-Navbar1.displayName = "Navbar1";
+Navbar101.displayName = "Navbar1";
+
+export default Navbar101;

@@ -49,9 +49,9 @@ export const Testimonial3 = (props: Testimonial3Props) => {
                 className="mb-4 size-14 min-h-14 min-w-14 rounded-full object-cover"
               />
               <p className="font-semibold">{testimonial.name}</p>
-              <p>
-                <span>{testimonial.position}</span>, <span>{testimonial.companyName}</span>
-              </p>
+              {/* <p>
+                <span>{testimonial.position}</span><span>{testimonial.companyName}</span>
+              </p> */}
             </div>
           ))}
         </div>
