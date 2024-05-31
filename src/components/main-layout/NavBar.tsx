@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "@relume_io/relume-ui";
 import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { RxChevronDown } from "react-icons/rx";
 import Link from "next/link";
+import Image from "next/image";
 
 type LinkProps = {
   title: string;
@@ -90,7 +91,9 @@ export const Navbar101 = (props: Navbar1Props) => {
     <nav className="flex w-full items-center  bg-gradient-to-b from-base-100 to-base-200 lg:min-h-18 lg:px-[5%]">
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-          <img src={logo.src} alt={logo.alt} />
+          <Link href="/">
+            <Image src={logo.src} alt={logo.alt || "default alt text"} width={50} height={50}/>
+          </Link>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -161,33 +164,31 @@ const NavItemDropdown = ({
   subLinks: LinkProps[];
 }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef<HTMLUListElement>(null);
 
-  // close dropdown if clicked outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mouseup", handleClickOutside);
-    return () => {
-      document.removeEventListener("mouseup", handleClickOutside);
-    };
-  }, [dropdownRef]);
+  // if I wanted to close dropdown if clicked outside;
 
-  // const handleSublinkClick =
-  //   (subLink: LinkProps) => (event: React.MouseEvent) => {
-  //     event.preventDefault();
-  //     window.location.href = subLink.url;
-  //     setDropdownOpen(false);
-  //   };
+  // const dropdownRef = useRef<HTMLUListElement>(null);
+
+  //   useEffect(() => {
+  //     const handleClickOutside = (event: MouseEvent) => {
+  //       if (
+  //         dropdownRef.current &&
+  //         !dropdownRef.current.contains(event.target as Node)
+  //       ) {
+  //         setDropdownOpen(false);
+  //       }
+  //     };
+  //     document.addEventListener("mouseup", handleClickOutside);
+  //     return () => {
+  //       document.removeEventListener("mouseup", handleClickOutside);
+  //     };
+  //   }, [dropdownRef]);
 
   return (
-    <nav ref={dropdownRef}>
+    <nav
+      onMouseEnter={() => setDropdownOpen(true)}
+      onMouseLeave={() => setDropdownOpen(false)}
+    >
       <button
         className="flex w-full items-center justify-between gap-2 py-3 text-left text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base"
         onClick={() => setDropdownOpen((prev) => !prev)}
@@ -210,8 +211,8 @@ const NavItemDropdown = ({
         <AnimatePresence>
           <motion.ul
             animate={dropdownOpen ? "open" : "close"}
-            initial="open"
-            exit="open"
+            initial="close"
+            exit="close"
             variants={{
               open: {
                 visibility: "visible",
@@ -246,16 +247,16 @@ const NavItemDropdown = ({
     </nav>
   );
 };
-
 export const Navbar1Defaults: Navbar1Props = {
   logo: {
     src: "https://relume-assets.s3.amazonaws.com/logo-image.svg",
     alt: "Logo image",
+    url: "/",
   },
   links: [
     {
       title: "Our Kindy",
-      url: "#",
+      url: "",
       subLinks: [
         { title: "Teachers", url: "/teachers" },
         { title: "Philosophy", url: "#" },
@@ -265,6 +266,7 @@ export const Navbar1Defaults: Navbar1Props = {
     { title: "Facilities", url: "/" },
     { title: "Getting Involved", url: "#" },
     { title: "FAQ", url: "/faq" },
+
   ],
   buttons: [
     {

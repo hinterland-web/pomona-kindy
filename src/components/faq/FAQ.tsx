@@ -127,7 +127,7 @@ export const Faq4Defaults: Faq4Props = {
   footerHeading: "Still have questions?",
   footerDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   button: {
-    title: "Contact",
-    variant: "secondary",
+    title: "Get in Touch!",
+    variant: "primary",
   },
 };
