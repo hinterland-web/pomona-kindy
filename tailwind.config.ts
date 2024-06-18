@@ -35,7 +35,7 @@ const config: Config = {
       },
       colors: {
         base: {
-          50: "",
+          50: "#143144",
           // expand palette to contrast well with base content and with similar hue
           100: "",
           200: "",
@@ -49,7 +49,7 @@ const config: Config = {
 
         //CTA colors
         primary: {
-          text: "",
+          text: "#f5f5f5",
           "primary-content": "",
         },
       },

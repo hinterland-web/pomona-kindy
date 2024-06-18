@@ -88,7 +88,7 @@ export const Navbar101 = (props: Navbar1Props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="flex w-full items-center  bg-gradient-to-b from-base-100 to-base-200 lg:min-h-18 lg:px-[5%]">
+    <nav className="flex w-full items-center  lg:min-h-18 lg:px-[5%]">
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <Link href="/">
@@ -263,7 +263,7 @@ export const Navbar1Defaults: Navbar1Props = {
         { title: "Parent Committee", url: "#" },
       ],
     },
-    { title: "Facilities", url: "/" },
+    { title: "Facilities", url: "/facilities" },
     { title: "Getting Involved", url: "#" },
     { title: "FAQ", url: "/faq" },
 
