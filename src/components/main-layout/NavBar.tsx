@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import { useRouter } from "next/router";
 import { Button } from "@relume_io/relume-ui";
 import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
@@ -92,7 +93,12 @@ export const Navbar101 = (props: Navbar1Props) => {
       <div className="size-full lg:flex lg:items-center lg:justify-between">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <Link href="/">
-            <Image src={logo.src} alt={logo.alt || "default alt text"} width={50} height={50}/>
+            <Image
+              src={logo.src}
+              alt={logo.alt || "default alt text"}
+              width={50}
+              height={50}
+            />
           </Link>
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
@@ -139,16 +145,18 @@ export const Navbar101 = (props: Navbar1Props) => {
             </div>
           ))}
           <div className="mt-6 flex flex-col items-center gap-4 lg:ml-4 lg:mt-0 lg:flex-row">
-            {buttons.map((button, index) => (
-              <Button
-                key={`${button.title}-${index}`}
-                className="w-full"
-                variant={button.variant}
-                size={button.size}
-              >
-                {button.title}
-              </Button>
-            ))}
+            <Link href="/contact">
+              {buttons.map((button, index) => (
+                <Button
+                  key={`${button.title}-${index}`}
+                  className="w-full"
+                  variant={button.variant}
+                  size={button.size}
+                >
+                  {button.title}
+                </Button>
+              ))}
+            </Link>
           </div>
         </motion.div>
       </div>
@@ -256,22 +264,22 @@ export const Navbar1Defaults: Navbar1Props = {
   links: [
     {
       title: "Our Kindy",
-      url: "",
+      url: "/",
       subLinks: [
         { title: "Teachers", url: "/teachers" },
-        { title: "Philosophy", url: "#" },
-        { title: "Parent Committee", url: "#" },
+        { title: "Philosophy", url: "/philosophy" },
+        { title: "Parent Committee", url: "/parent-committee" },
       ],
     },
     { title: "Facilities", url: "/facilities" },
     { title: "Getting Involved", url: "#" },
     { title: "FAQ", url: "/faq" },
-
   ],
   buttons: [
     {
       title: "Get in Touch!",
       size: "sm",
+      url: "/",
     },
   ],
 };

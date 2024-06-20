@@ -4,6 +4,7 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   darkMode: "class",
+
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -129,80 +130,23 @@ const config: Config = {
 
       colors: {
         base: {
-          50: "#000000",
+          50: "#000000", // base-content for bg and H1
+          "content-secondary": "#143144", // to create text hierarchy
+          "cta-primary": "#000000",
+          "cta-secondary": "#ffffff",
           // expand palette to contrast well with base content and with similar hue
           100: "#ffffff",
           200: "",
           300: "",
-          "cta-primary": "#000000",
-          "cta-secondary": "#ffffff",
-        },
-        background: {
-          primary: "#ffffff", // bg and H1
-          secondary: "#eeeeee", // to create text hierarchy
-        },
-        system: {
-          "success-green": "#027a48",
-          "success-green-light": "#ecfdf3",
-          "error-red": "#b42318",
-          "error-red-light": "#fef3f2",
         },
 
-        border: {
-          DEFAULT: "#000000",
-          primary: "#000000",
-          secondary: "#aaaaaa",
-          tertiary: "#444444",
-          alternative: "#ffffff",
-          success: "#027a48",
-          error: "#b42318",
+        //CTA colors
+        primary: {
+          text: "#f5f5f5",
+          "primary-content": "",
         },
-
-        link: {
-          DEFAULT: "#000000",
-          primary: "#000000",
-          secondary: "#666666",
-          alternative: "#ffffff",
-        },
-      },
-
-      
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0px" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0px" },
-        },
-        "loop-horizontally": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
-        },
-        "loop-vertically": {
-          from: { transform: "translateY(0)" },
-          to: { transform: "translateY(-50%)" },
-        },
-        "marquee-top": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
-        },
-        "marquee-bottom": {
-          from: { transform: "translateX(-50%)" },
-          to: { transform: "translateX(0%)" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "loop-horizontally": "loop-horizontally 20s linear infinite",
-        "loop-vertically": "loop-vertically 30s linear infinite",
-        "marquee-top": "marquee-top 50s linear infinite",
-        "marquee-bottom": "marquee-bottom 50s linear infinite",
       },
     },
-    
   },
 };
 

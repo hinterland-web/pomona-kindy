@@ -46,7 +46,7 @@ export const Layout423 = (props: Layout423Props) => {
   const [hoveredFeatureIdx, setHoveredFeatureIdx] = useState<number | null>(null);
 
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-50">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-background-primary">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20 text-primary-text">
           <p className="mb-3 font-semibold md:mb-4">{tagline}</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { Button, Input } from "@relume_io/relume-ui";
+import Link from "next/link";
 import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
 import { FaXTwitter } from "react-icons/fa6";
 import {
@@ -96,14 +97,17 @@ export const Footer2 = (props: Footer2Props) => {
             <div className="max-w-md">
               <div className="mb-3 grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-[1fr_max-content] md:gap-y-4">
                 {/* <Input placeholder={inputPlaceholder} /> */}
+                <Link href="/contact">
                 <Button
                   variant={button.variant}
                   size={button.size}
                   iconRight={button.iconRight}
                   iconLeft={button.iconLeft}
+                 
                 >
                   {button.title}
                 </Button>
+                </Link>
               </div>
               
             </div>

@@ -56,7 +56,7 @@ export const Layout77Defaults: Layout77Props = {
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
   buttons: [
-    // { title: "Button", variant: "secondary" },
+    
     {
       title: "Learn More",
       variant: "link",
