@@ -13,7 +13,6 @@ const config: Config = {
   ],
 
   presets: [require("@relume_io/relume-tailwind")],
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 
   theme: {
     screens: {
@@ -132,18 +131,13 @@ const config: Config = {
         base: {
           50: "#000000", // base-content for bg and H1
           "content-secondary": "#143144", // to create text hierarchy
+          //CTA colors
           "cta-primary": "#000000",
           "cta-secondary": "#ffffff",
           // expand palette to contrast well with base content and with similar hue
           100: "#ffffff",
           200: "",
           300: "",
-        },
-
-        //CTA colors
-        primary: {
-          text: "#f5f5f5",
-          "primary-content": "",
         },
       },
     },
