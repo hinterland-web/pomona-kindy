@@ -38,7 +38,7 @@ export const Testimonial3 = (props: Testimonial3Props) => {
               key={`${testimonial.testimonial}-${index}`}
               className="flex flex-col items-center text-center"
             >
-              <Image src={testimonial.image.src} alt={testimonial.image.alt || "default alt text"} className="max-h-14" fill={true}/>
+              
               <blockquote
                 className={`my-6 text-md font-bold leading-[1.4] before:content-['"'] after:content-['"'] md:my-8 md:text-xl`}
               >
