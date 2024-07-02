@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {Mulish } from "next/font/google";
 import "./globals.css";
 import { Navbar101, Navbar1Defaults } from "@/components/main-layout/NavBar";
 import { Footer2, Footer2Defaults } from "@/components/main-layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const mulish = Mulish({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={mulish.className}>
         <Navbar101 {...Navbar1Defaults} />
         {/* <Navbar1 /> */}
         {children}

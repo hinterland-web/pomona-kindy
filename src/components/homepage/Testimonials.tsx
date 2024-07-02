@@ -1,6 +1,7 @@
 "use client";
 
 import type { ImageProps } from "@relume_io/relume-ui";
+import Image from "next/image";
 
 type Testimonial = {
   image: ImageProps;
@@ -25,7 +26,7 @@ export const Testimonial3 = (props: Testimonial3Props) => {
     ...props,
   } as Props;
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
           <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h1>
@@ -37,16 +38,18 @@ export const Testimonial3 = (props: Testimonial3Props) => {
               key={`${testimonial.testimonial}-${index}`}
               className="flex flex-col items-center text-center"
             >
-              <img src={testimonial.image.src} alt={testimonial.image.alt} className="max-h-14" />
+              <Image src={testimonial.image.src} alt={testimonial.image.alt || "default alt text"} className="max-h-14" fill={true}/>
               <blockquote
                 className={`my-6 text-md font-bold leading-[1.4] before:content-['"'] after:content-['"'] md:my-8 md:text-xl`}
               >
                 {testimonial.testimonial}
               </blockquote>
-              <img
+              <Image
                 src={testimonial.avatar.src}
-                alt={testimonial.avatar.alt}
+                alt={testimonial.avatar.alt || "default alt text"}
                 className="mb-4 size-14 min-h-14 min-w-14 rounded-full object-cover"
+                width={80}
+                height={80}
               />
               <p className="font-semibold">{testimonial.name}</p>
               {/* <p>

@@ -5,6 +5,8 @@ import type { ButtonProps, ImageProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { RxChevronRight } from "react-icons/rx";
+import Image from "next/image";
+import { inherits } from "util";
 
 type FeatureProps = {
   tagline: string;
@@ -46,12 +48,12 @@ export const Layout423 = (props: Layout423Props) => {
   const [hoveredFeatureIdx, setHoveredFeatureIdx] = useState<number | null>(null);
 
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-background-primary">
-      <div className="container">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-content">
+      <div className="container text-base-white">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20 text-primary-text">
           <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
           <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h2>
-          <p className="md:text-md">{description}</p>
+          {/* <p className="md:text-md">{description}</p> */}
         </div>
         <div className="flex flex-col items-stretch justify-between gap-6 md:gap-8 lg:flex-row">
           {features.map((feature, index) => (
@@ -64,10 +66,11 @@ export const Layout423 = (props: Layout423Props) => {
             >
               <div className="absolute inset-0 flex size-full flex-col items-center justify-center self-start">
                 <div className="absolute inset-0 bg-black/50" />
-                <img
+                <Image
                   src={feature.image.src}
-                  alt={feature.image.alt}
+                  alt={feature.image.alt || "default alt text"}
                   className="size-full object-cover"
+                 fill={true}
                 />
               </div>
               <div className="group relative flex h-full min-h-[70vh] flex-col justify-end p-6 md:p-8">

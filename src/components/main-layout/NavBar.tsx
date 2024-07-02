@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import { useRouter } from "next/router";
+
 import { Button } from "@relume_io/relume-ui";
 import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { RxChevronDown } from "react-icons/rx";
 import Link from "next/link";
 import Image from "next/image";
+import cloudflareLoader from "../../../imageLoader"
 
 type LinkProps = {
   title: string;
@@ -89,11 +90,12 @@ export const Navbar101 = (props: Navbar1Props) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="flex w-full items-center  lg:min-h-18 lg:px-[5%]">
-      <div className="size-full lg:flex lg:items-center lg:justify-between">
+    <nav className="flex w-full items-center  lg:min-h-18 lg:px-[5%] bg-base-content">
+      <div className="size-full lg:flex lg:items-center lg:justify-between text-base-white">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <Link href="/">
             <Image
+            
               src={logo.src}
               alt={logo.alt || "default alt text"}
               width={50}
@@ -125,7 +127,7 @@ export const Navbar101 = (props: Navbar1Props) => {
           animate={mobileMenuOpen ? "open" : "close"}
           initial="close"
           variants={dropDownVariants}
-          className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+          className="text-base-white overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
         >
           {links.map((link, index) => (
             <div
@@ -149,7 +151,7 @@ export const Navbar101 = (props: Navbar1Props) => {
               {buttons.map((button, index) => (
                 <Button
                   key={`${button.title}-${index}`}
-                  className="w-full"
+                  className="w-full bg-base-cta-secondary rounded-md "
                   variant={button.variant}
                   size={button.size}
                 >
@@ -234,7 +236,7 @@ const NavItemDropdown = ({
               },
             }}
             transition={{ duration: 0.3 }}
-            className="bg-white z-50 lg:absolute lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
+            className="bg-base-content z-50 lg:absolute lg:border lg:border-border-primary lg:p-2 lg:[--y-close:25%]"
           >
             {subLinks.map((subLink, index) => (
               <li
@@ -257,7 +259,7 @@ const NavItemDropdown = ({
 };
 export const Navbar1Defaults: Navbar1Props = {
   logo: {
-    src: "https://relume-assets.s3.amazonaws.com/logo-image.svg",
+    src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/C%26A_Logo_HI-RES_no_bg.png",
     alt: "Logo image",
     url: "/",
   },

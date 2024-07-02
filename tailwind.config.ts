@@ -124,20 +124,23 @@ const config: Config = {
       },
 
       fontFamily: {
-        antonio: ["Antonio", "sans-serif"], // ensure font weights are loaded as necessary
+        antonio: ["Mulish", "sans-serif"], // ensure font weights are loaded as necessary
       },
 
       colors: {
         base: {
-          50: "#000000", // base-content for bg and H1
-          "content-secondary": "#143144", // to create text hierarchy
+          "white": "#FCFCFA",
+          "content": "#8D9854", // base-content for bg and H1
+          "content-secondary": "", // to create text hierarchy
           //CTA colors
-          "cta-primary": "#000000",
-          "cta-secondary": "#ffffff",
+          "cta-primary": "#D1D92C",
+          // "cta-secondary": "#34C759",
+          "cta-secondary": "#BFC712",
           // expand palette to contrast well with base content and with similar hue
-          100: "#ffffff",
-          200: "",
-          300: "",
+          100: "",
+          200: "#A9B27A",
+          300: "#79814F",
+          400: "#636B35"
         },
       },
     },
