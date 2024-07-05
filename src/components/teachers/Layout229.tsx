@@ -3,6 +3,7 @@
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps, ImageProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
+import Image from "next/image";
 
 type SectionProps = {
   image: ImageProps;
@@ -20,12 +21,14 @@ export type Layout229Props = React.ComponentPropsWithoutRef<"section"> & Props;
 
 export const Layout229 = (props: Layout229Props) => {
   const { sections } = { ...props, ...Layout229Defaults };
+  
+  
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">Hello</p>
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">Hello1</h2>
-          <p className="md:text-md">Hello2</p>
+       
+          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">Meet our Team!</h2>
+          {/* <p className="md:text-md">Hello2</p> */}
         </div>
       <div className="container grid grid-cols-1 items-start justify-center gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12 lg:gap-y-16">
         {sections.map((section, index) => (
@@ -34,7 +37,7 @@ export const Layout229 = (props: Layout229Props) => {
             className="flex w-full flex-col items-center text-center"
           >
             <div className="mb-6 md:mb-8">
-              <img src={section.image.src} alt={section.image.alt} />
+              <img  src={section.image.src} alt={section.image.alt} />
             </div>
             <p className="mb-3 font-semibold md:mb-4">{section.tagline}</p>
             <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">

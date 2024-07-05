@@ -104,7 +104,7 @@ export const Footer2 = (props: Footer2Props) => {
                   size={button.size}
                   iconRight={button.iconRight}
                   iconLeft={button.iconLeft}
-                  className="w-full bg-base-cta-secondary rounded-md "
+                  className="w-full bg-base-cta-secondary rounded-md  hover:bg-base-white hover:text-base-content "
                  
                 >
                   {button.title}
@@ -170,33 +170,27 @@ export const Footer2Defaults: Footer2Props = {
   ),
   columnLinks: [
     {
-      title: "Column One",
+      title: "Our Kindy",
       links: [
-        { title: "Link One", url: "#" },
-        { title: "Link Two", url: "#" },
-        { title: "Link Three", url: "#" },
-        { title: "Link Four", url: "#" },
-        { title: "Link Five", url: "#" },
+        { title: "Our Teachers", url: "/teachers" },
+        { title: "Our Philosophy", url: "/philosophy" },
+        { title: "Parent Committee", url: "/parent-committee" },
+        
       ],
     },
     {
-      title: "Column Two",
+      title: "Facilities",
       links: [
-        { title: "Link Six", url: "#" },
-        { title: "Link Seven", url: "#" },
-        { title: "Link Eight", url: "#" },
-        { title: "Link Nine", url: "#" },
-        { title: "Link Ten", url: "#" },
+        { title: "Image Gallery", url: "/facilities" },
+       
       ],
     },
     {
-      title: "Column Three",
+      title: "Getting Involved",
       links: [
-        { title: "Link Eleven", url: "#" },
-        { title: "Link Twelve", url: "#" },
-        { title: "Link Thirteen", url: "#" },
-        { title: "Link Fourteen", url: "#" },
-        { title: "Link Fifteen", url: "#" },
+        { title: "Contact Us", url: "/getting-involved" },
+        { title: "FAQ", url: "/faq" },
+        
       ],
     },
   ],

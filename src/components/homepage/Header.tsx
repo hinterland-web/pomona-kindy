@@ -27,7 +27,7 @@ export const Header5 = (props: Header5Props) => {
             <h1 className="mb-5 text-6xl text-text-alternative md:mb-6 md:text-9xl lg:text-10xl">
               {heading}
             </h1>
-            <p className="text-base text-text-alternative md:text-md">{description}</p>
+            <p className="text-2xl text-text-alternative md:text-lg">{description}</p>
             <div className="mt-6 flex gap-x-4 md:mt-8">
               <Link href="/contact">
               {buttons.map((button, index) => (
@@ -37,7 +37,7 @@ export const Header5 = (props: Header5Props) => {
                   size={button.size}
                   iconRight={button.iconRight}
                   iconLeft={button.iconLeft}
-                  className="text-lg bg-base-cta-secondary rounded-md "
+                  className="text-lg bg-base-cta-secondary rounded-md  hover:bg-base-white hover:text-base-content"
                 >
                   {button.title}
                 </Button>
@@ -58,7 +58,7 @@ export const Header5 = (props: Header5Props) => {
 export const Header5Defaults: Header5Props = {
   heading: "Where Imagination Moves Mountains",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    "We’re a not-for-profit community organisation proudly affiliated with the Crèche and Kindergarten Association of Queensland (C&K)",
   buttons: [{ title: "Book a Visit" }], 
   // { title: "Button", variant: "secondary-alt" }],
   image: {

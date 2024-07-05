@@ -55,7 +55,7 @@ export const Layout77Defaults: Layout77Props = {
   icon: { src: "", alt: "" },
   heading: "We acknowledge the uniqueness and potential of all children",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
+    "We've created an environment where learning and play harmoniously coexist, and every day is an adventure waiting to unfold. Our kindergarten is more than just a place of education; it's a world of wonder and discovery, carefully designed to stimulate young minds and nurture their curiosity.",
   buttons: [
     
     {

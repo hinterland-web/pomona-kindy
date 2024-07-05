@@ -15,7 +15,8 @@ type Props = {
   button: ButtonProps;
 };
 
-export type Contact5Props = React.ComponentPropsWithoutRef<"section"> & Partial<Props>;
+export type Contact5Props = React.ComponentPropsWithoutRef<"section"> &
+  Partial<Props>;
 
 export const Contact5 = (props: Contact5Props) => {
   const { tagline, heading, description, email, phone, address, button } = {
@@ -26,7 +27,9 @@ export const Contact5 = (props: Contact5Props) => {
   const [nameInput, setNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
-  const [acceptTerms, setAcceptTerms] = useState<boolean | "indeterminate">(false);
+  const [acceptTerms, setAcceptTerms] = useState<boolean | "indeterminate">(
+    false
+  );
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -44,7 +47,9 @@ export const Contact5 = (props: Contact5Props) => {
         <div>
           <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
           <div className="mb-6 md:mb-8">
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h2>
+            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              {heading}
+            </h2>
             <p className="md:text-md">{description}</p>
           </div>
 
@@ -64,7 +69,10 @@ export const Contact5 = (props: Contact5Props) => {
           </div>
         </div>
 
-        <form className="grid grid-cols-1 grid-rows-[auto_auto] gap-6" onSubmit={handleSubmit}>
+        <form
+          className="grid grid-cols-1 grid-rows-[auto_auto] gap-6"
+          onSubmit={handleSubmit}
+        >
           <div className="grid w-full items-center">
             <Label htmlFor="name" className="mb-2">
               Name
@@ -103,7 +111,11 @@ export const Contact5 = (props: Contact5Props) => {
           </div>
 
           <div className="mb-3 flex items-center space-x-2 text-sm md:mb-4">
-            <Checkbox id="terms" checked={acceptTerms} onCheckedChange={setAcceptTerms} />
+            <Checkbox
+              id="terms"
+              checked={acceptTerms}
+              onCheckedChange={setAcceptTerms}
+            />
             <Label htmlFor="terms" className="cursor-pointer">
               I accept the{" "}
               <a
@@ -134,12 +146,12 @@ export const Contact5 = (props: Contact5Props) => {
 };
 
 export const Contact5Defaults: Contact5Props = {
-  tagline: "Tagline",
+  tagline: "We are here to help",
   heading: "Contact us",
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  email: "hello@relume.io",
+  email: "hello@kindy.cool",
   phone: "+1 (555) 000-0000",
-  address: "123 Sample St, Sydney NSW 2000 AU",
+  address: "Middle of Pomona",
   button: { title: "Submit" },
 };
 

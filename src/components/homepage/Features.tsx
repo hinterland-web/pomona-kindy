@@ -48,11 +48,11 @@ export const Layout423 = (props: Layout423Props) => {
   const [hoveredFeatureIdx, setHoveredFeatureIdx] = useState<number | null>(null);
 
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-content">
-      <div className="container text-base-white">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white">
+      <div className="container text-base-content">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20 text-primary-text">
           <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h2>
+          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">{heading}</h2>
           {/* <p className="md:text-md">{description}</p> */}
         </div>
         <div className="flex flex-col items-stretch justify-between gap-6 md:gap-8 lg:flex-row">
@@ -75,9 +75,9 @@ export const Layout423 = (props: Layout423Props) => {
               </div>
               <div className="group relative flex h-full min-h-[70vh] flex-col justify-end p-6 md:p-8">
                 <div className="lg:absolute lg:inset-0 lg:z-0 lg:transition-all lg:duration-300 lg:group-hover:bg-black/50" />
-                <div className="z-10">
-                  <p className="mb-2 font-semibold text-text-alternative">{feature.tagline}</p>
-                  <h3 className="text-2xl font-bold text-text-alternative md:text-3xl md:leading-[1.3] lg:text-4xl">
+                <div className="z-10 " >
+                  <p className="mb-2 font-semibold text-base-white">{feature.tagline}</p>
+                  <h3 className="text-2xl font-bold text-base-white  md:text-3xl md:leading-[1.3] lg:text-4xl">
                     {feature.heading}
                   </h3>
                 </div>
@@ -100,7 +100,7 @@ export const Layout423 = (props: Layout423Props) => {
                           iconLeft={feature.button.iconLeft}
                           className="text-text-alternative"
                         >
-                          Button
+                          Learn More
                         </Button>
                       </div>
                     </motion.div>
@@ -136,13 +136,13 @@ export const Layout423Defaults: Layout423Props = {
   features: [
     {
       tagline: "Tagline",
-      url: "#",
+      url: "/teachers",
       heading: "Medium length section heading goes here",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
       image: {
-        src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
-        alt: "Placeholder image 1",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-inside.png",
+        alt: "pomona kindy inside",
       },
       button: {
         variant: "link",
@@ -152,13 +152,13 @@ export const Layout423Defaults: Layout423Props = {
     },
     {
       tagline: "Tagline",
-      url: "#",
+      url: "/philosophy",
       heading: "Medium length section heading goes here",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
       image: {
-        src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
-        alt: "Placeholder image 2",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-activities.png",
+        alt: "pomona kindy activities",
       },
       button: {
         variant: "link",
@@ -168,12 +168,12 @@ export const Layout423Defaults: Layout423Props = {
     },
     {
       tagline: "Tagline",
-      url: "#",
+      url: "/parent-committee",
       heading: "Medium length section heading goes here",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
       image: {
-        src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-children-playing.png",
         alt: "Placeholder image 3",
       },
       button: {
