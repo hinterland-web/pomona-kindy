@@ -151,7 +151,7 @@ export const Navbar101 = (props: Navbar1Props) => {
               {buttons.map((button, index) => (
                 <Button
                   key={`${button.title}-${index}`}
-                  className="w-full bg-base-cta-secondary rounded-md hover:bg-base-white hover:text-base-content"
+                  className="w-full bg-base-cta-secondary rounded-md hover:bg-base-white hover:text-base"
                   variant={button.variant}
                   size={button.size}
                 >
@@ -261,7 +261,7 @@ export const Navbar1Defaults: Navbar1Props = {
   logo: {
     src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/C%26A_Logo_HI-RES_no_bg.png",
     alt: "Logo image",
-    url: "/",
+   
   },
   links: [
     {
