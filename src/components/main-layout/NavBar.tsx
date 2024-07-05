@@ -151,7 +151,7 @@ export const Navbar101 = (props: Navbar1Props) => {
               {buttons.map((button, index) => (
                 <Button
                   key={`${button.title}-${index}`}
-                  className="w-full bg-base-cta-secondary rounded-md hover:bg-base-white hover:text-base"
+                  className="w-full bg-base-cta-secondary rounded-md hover:bg-base-white hover:text-base-content"
                   variant={button.variant}
                   size={button.size}
                 >
