@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ImageProps = {
     src: string;
     alt?: string;
@@ -20,7 +22,7 @@ type ImageProps = {
       <section className="px-[5%] py-16 md:py-24 lg:py-28">
         <div className="container">
           <div className="mb-12 md:mb-18 lg:mb-20">
-            <img src={image.src} className="w-full object-cover" alt={image.alt} />
+            <Image src={image.src} className="w-full object-cover" alt={image.alt || "default alt text"} />
           </div>
           <div className="mx-auto w-full max-w-lg items-center">
             <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h2>

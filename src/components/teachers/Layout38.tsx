@@ -1,7 +1,7 @@
 "use client";
 
 import type { ImageProps } from "@relume_io/relume-ui";
-
+import Image from "next/image";
 type Props = {
   heading: string;
   description: string;
@@ -28,7 +28,7 @@ export const Layout38 = (props: Layout38Props) => {
         </div>
       </div>
       <div className="absolute inset-0 -z-10">
-        <img src={image.src} className="size-full object-cover" alt={image.alt} />
+        <Image src={image.src} className="size-full object-cover" alt={image.alt || "default alt text"} fill={true} />
         <div className="absolute inset-0 bg-black/50" />
       </div>
     </section>

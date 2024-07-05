@@ -23,7 +23,7 @@ export const Layout77 = (props: Layout77Props) => {
       <div className="container grid grid-cols-1 items-start justify-between gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
         <div>
           <div className="mb-5 md:mb-6">
-            {/* <img src="" className="size-12" alt="" /> */}
+         
           </div>
           <h2 className="text-5xl font-bold md:text-7xl lg:text-8xl">{heading}</h2>
         </div>

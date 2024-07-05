@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ImageProps = {
   src: string;
   alt?: string;
@@ -22,10 +24,10 @@ export const Content2 = (props: Content2Props) => {
       <div className="container">
         <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
           <div>
-            <img
+            <Image
               src={image.src}
               className="w-full object-cover"
-              alt={image.alt}
+              alt={image.alt || "default alt text"}
             />
           </div>
           <div>

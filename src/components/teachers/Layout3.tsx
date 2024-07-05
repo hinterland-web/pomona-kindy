@@ -1,6 +1,7 @@
 "use client";
 
 import type { ImageProps } from "@relume_io/relume-ui";
+import Image from "next/image";
 
 type Props = {
   heading: string;
@@ -24,7 +25,7 @@ export const Layout3 = (props: Layout3Props) => {
             <p className="md:text-md">{description}</p>
           </div>
           <div>
-            <img src={image.src} className="w-full object-cover" alt={image.alt} />
+            <Image src={image.src} className="w-full object-cover" alt={image.alt || "default alt text"} />
           </div>
         </div>
       </div>

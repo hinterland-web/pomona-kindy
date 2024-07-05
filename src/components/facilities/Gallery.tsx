@@ -1,5 +1,5 @@
 import clsx from "clsx";
-
+import Image from "next/image";
 type ImageProps = {
   url?: string;
   src: string;
@@ -40,9 +40,9 @@ export const Gallery8 = (props: Gallery8Props) => {
                   "pt-[66.66%]": index % 3 !== 0,
                 })}
               >
-                <img
+                <Image
                   src={image.src}
-                  alt={image.alt}
+                  alt={image.alt || "default alt text"}
                   className="absolute inset-0 size-full object-cover"
                 />
               </div>

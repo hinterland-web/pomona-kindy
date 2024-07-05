@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ImageProps = {
     src: string;
     alt?: string;
@@ -23,7 +25,7 @@ type ImageProps = {
           <p className="md:text-md">{description}</p>
         </div>
         <div>
-          <img src={image.src} className="w-full object-cover" alt={image.alt} />
+          <Image src={image.src} className="w-full object-cover" alt={image.alt || "default alt text"} />
         </div>
       </section>
     );
