@@ -37,7 +37,7 @@ export const Layout229 = (props: Layout229Props) => {
             className="flex w-full flex-col items-center text-center"
           >
             <div className="mb-6 md:mb-8">
-              <img  src={section.image.src} alt={section.image.alt} />
+              <Image  src={section.image.src} alt={section.image.alt || "default alt text"} />
             </div>
             <p className="mb-3 font-semibold md:mb-4">{section.tagline}</p>
             <h3 className="mb-5 text-2xl font-bold md:mb-6 md:text-3xl md:leading-[1.3] lg:text-4xl">
