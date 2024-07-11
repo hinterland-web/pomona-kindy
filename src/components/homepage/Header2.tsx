@@ -26,7 +26,7 @@ export const Header36 = (props: Header36Props) => {
   return (
     <header className="grid grid-cols-1 items-center gap-y-16 pt-16 md:pt-24 lg:grid-cols-2 lg:pt-0 bg-base-cta-secondary">
       <div className="mx-[5%] sm:max-w-md md:justify-self-start lg:ml-[5vw] lg:mr-20 lg:justify-self-end">
-        <h1 className="text-base-white mb-5 text-6xl font-bold md:mb-6 md:text-9xl lg:text-10xl">
+        <h1 className="text-base-white mb-5 text-6xl font-black md:mb-6 md:text-9xl lg:text-10xl">
           {heading}
         </h1>
         <p className="md:text-md">Hello! We are currently redesigning our website with the help of <Link href="https://hinterlandweb.com" className="font-bold bg-base-content text-base-white p-1">Hinterland Web</Link>. In the meanwhile feel free to write us an email, in case you have any enquiries</p>
