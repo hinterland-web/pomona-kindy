@@ -48,8 +48,8 @@ export const Header36 = (props: Header36Props) => {
         <Image
           src={image.src}
           alt={image.alt || "default alt text"}
-          width={300}
-          height={400}
+          width={200}
+          height={300}
           className="w-full object-cover lg:h-screen lg:max-h-[60rem]"
         />
       </div>
