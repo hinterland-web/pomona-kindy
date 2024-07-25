@@ -20,7 +20,7 @@ export const Content2 = (props: Content2Props) => {
     ...props,
   } as Props;
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white">
       <div className="container">
         <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
           <div>
@@ -28,6 +28,8 @@ export const Content2 = (props: Content2Props) => {
               src={image.src}
               className="w-full object-cover"
               alt={image.alt || "default alt text"}
+              width={100}
+              height={100}
             />
           </div>
           <div>
@@ -43,28 +45,28 @@ export const Content2 = (props: Content2Props) => {
 };
 
 export const Content2Defaults: Content2Props = {
-  heading: "Short heading goes here",
+  heading: "What is the Parent Committee?",
   children: (
     <div>
       <p>
-        Morbi sed imperdiet in ipsum, adipiscing elit dui lectus. Tellus id
-        scelerisque est ultricies ultricies. Duis est sit sed leo nisl, blandit
-        elit sagittis. Quisque tristique consequat quam sed. Nisl at scelerisque
-        amet nulla purus habitasse.
+        The committee is elected by the members of the Kindergarten during an
+        Annual General Meeting (AGM) to manage Kindergarten operations for, and
+        on behalf of the members (normally centre parents). What your committee
+        looks like and how it operates is outlined in your Constitution (or
+        Rules of the Association). It is important that all Committee members
+        have a copy and become familiar with the Constitution when elected. Your
+        Constitution is a legal document and you and the members of your
+        Association must follow the rules it sets out.
       </p>
+
       <p>
-        Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas
-        condimentum mi massa. In tincidunt pharetra consectetur sed duis
-        facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit
-        dictum eget nibh tortor commodo cursus.
-      </p>
-      <p>
-        Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet.
-        Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget
-        ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec
-        posuere pharetra odio consequat scelerisque et, nunc tortor. Nulla
-        adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere
-        cursus diam.
+        The committee must have at least three members in Office Bearer
+        positions - President, Vice President, Secretary and Treasurer. You may
+        appoint additional members to the Committee, in accordance with your
+        Constitution. Please note, one person cannot be both President and
+        Treasurer, and all committee members must be 18 years of age or older.
+        All committee members must hold a current, valid Blue Card upon
+        commencement, and for the duration, of their role.
       </p>
     </div>
   ),

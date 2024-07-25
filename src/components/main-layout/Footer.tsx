@@ -42,6 +42,7 @@ type Props = {
   columnLinks: ColumnLinks[];
   socialMediaLinks: SocialMediaLinks[];
   footerText?: string;
+  acknowledgements?: string;
   footerLinks: FooterLink[];
 };
 
@@ -58,15 +59,16 @@ export const Footer2 = (props: Footer2Props) => {
     columnLinks,
     socialMediaLinks,
     footerText,
+    acknowledgements,
     footerLinks,
   } = {
     ...Footer2Defaults,
     ...props,
   } as Props;
   return (
-    <footer className="px-[5%] py-12 md:py-18 lg:py-20 bg-base-content">
+    <footer className="px-[2%] py-20 md:py-18 lg:py-12 bg-base-content">
       <div className="container">
-        <div className=" text-base-white grid grid-cols-1 items-start gap-x-[8vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[1fr_0.5fr] lg:gap-y-4 lg:pb-20">
+        <div className=" text-base-white grid grid-cols-1 items-start gap-x-[8vw] gap-y-12 pb-12 md:gap-y-16 md:pb-18 lg:grid-cols-[1fr_0.5fr] lg:gap-y-4 lg:pb-4">
           <div className="grid grid-cols-1 items-start gap-x-8 gap-y-10 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-12 md:gap-x-8 lg:grid-cols-4">
             <div className="sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-2 lg:col-start-auto lg:col-end-auto lg:row-start-auto lg:row-end-auto">
               <Image src={image.src} alt={image.alt || "default alt text"} width={100} height={100} />
@@ -113,11 +115,13 @@ export const Footer2 = (props: Footer2Props) => {
               </div>
              
             </div>
+            
           </div>
+          <p className="text-lg font-bold">{acknowledgements}</p>
         </div>
         <div className="h-px w-full bg-black " />
         <div className="flex flex-col-reverse items-start pb-4 pt-6 text-sm md:justify-start md:pb-0 md:pt-8 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex flex-col-reverse items-start md:flex-row md:gap-6 lg:items-center">
+          <div className="flex flex-row items-start md:flex-row md:gap-6 lg:items-center">
             <p className="mt-8 md:mt-0">{footerText}</p>
             <div className="grid grid-flow-row grid-cols-[max-content] justify-center gap-x-0 gap-y-4 md:grid-flow-col md:justify-center md:gap-x-6 md:gap-y-0 lg:text-left">
               {footerLinks.map((link, index) => (
@@ -197,11 +201,12 @@ export const Footer2Defaults: Footer2Props = {
   socialMediaLinks: [
     { url: "#", icon: <BiLogoFacebookCircle className="size-6" /> },
     { url: "#", icon: <BiLogoInstagram className="size-6" /> },
-    { url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
-    { url: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
-    { url: "#", icon: <BiLogoYoutube className="size-6" /> },
+    // { url: "#", icon: <FaXTwitter className="size-6 p-0.5" /> },
+    // { url: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
+    // { url: "#", icon: <BiLogoYoutube className="size-6" /> },
   ],
   footerText: "© 2024 Hinterland Web and Relume React Library. All rights reserved.",
+  acknowledgements: "We acknowledge the Kabi Kabi people, the Traditional Custodians of the land upon which we stand, teach and learn. We pay our respects to their Elders, past and present.",
   footerLinks: [
     { title: "Privacy Policy", url: "#" },
     { title: "Terms of Service", url: "#" },

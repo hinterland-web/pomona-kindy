@@ -268,6 +268,7 @@ export const Navbar1Defaults: Navbar1Props = {
       title: "Our Kindy",
       url: "/",
       subLinks: [
+        { title: "Our Story", url: "/story" },
         { title: "Teachers", url: "/teachers" },
         { title: "Philosophy", url: "/philosophy" },
         { title: "Parent Committee", url: "/parent-committee" },

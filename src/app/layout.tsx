@@ -19,10 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mulish.className}>
-        {/* <Navbar101 {...Navbar1Defaults} /> */}
-        {/* <Navbar1 /> */}
+        <Navbar101 {...Navbar1Defaults} />
+        
         {children}
-        {/* <Footer2 {...Footer2Defaults} /> */}
+        <Footer2 {...Footer2Defaults} />
       </body>
     </html>
   );

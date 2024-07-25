@@ -42,6 +42,8 @@ export const Testimonial3 = (props: Testimonial3Props) => {
               <Image
                 src={testimonial.avatar.src}
                 alt={testimonial.avatar.alt || "default alt text"}
+                width={100}
+                height={100}
                 className="mb-4 size-14 min-h-14 min-w-14 rounded-full object-cover"
               />
               <p className="font-semibold">{testimonial.name}</p>

@@ -44,6 +44,8 @@ export const Gallery8 = (props: Gallery8Props) => {
                   src={image.src}
                   alt={image.alt || "default alt text"}
                   className="absolute inset-0 size-full object-cover"
+                width={100}
+                height={100}
                 />
               </div>
             </a>

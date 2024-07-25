@@ -48,10 +48,10 @@ export const Layout423 = (props: Layout423Props) => {
   const [hoveredFeatureIdx, setHoveredFeatureIdx] = useState<number | null>(null);
 
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white">
-      <div className="container text-base-content">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-300">
+      <div className="container text-base-cta-primary">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20 text-primary-text">
-          <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
+          <p className="mb-3 text-lg font-semibold md:mb-4">{tagline}</p>
           <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">{heading}</h2>
           {/* <p className="md:text-md">{description}</p> */}
         </div>
@@ -135,11 +135,11 @@ export const Layout423Defaults: Layout423Props = {
   description: "Where Imagination moves mountains.",
   features: [
     {
-      tagline: "Tagline",
+      tagline: "Our Educators",
       url: "/teachers",
-      heading: "Medium length section heading goes here",
+      heading: "Meet our educators",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "Our educators are caring professionals who demonstrate positive guidance that reflect qualities of consistency, harmony and sensitivity. All staff hold current qualifications in first aid for early childhood, including CPR, asthma and anaphylaxis.",
       image: {
         src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-inside.png",
         alt: "pomona kindy inside",
@@ -151,13 +151,13 @@ export const Layout423Defaults: Layout423Props = {
       },
     },
     {
-      tagline: "Tagline",
+      tagline: "Our Philosophy",
       url: "/philosophy",
-      heading: "Medium length section heading goes here",
+      heading: "We provide a unique learning environment",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "Our Kindergarten is a Safe, Inclusive, and Welcoming Natural Learning Environment for Children and Families",
       image: {
-        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-activities.png",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-outside.png",
         alt: "pomona kindy activities",
       },
       button: {
@@ -167,11 +167,11 @@ export const Layout423Defaults: Layout423Props = {
       },
     },
     {
-      tagline: "Tagline",
+      tagline: "Getting Involved",
       url: "/parent-committee",
-      heading: "Medium length section heading goes here",
+      heading: "Kindergartens play a vital role in our communities.",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "Kindergartens are incredibly important in the education and care of the children in the community. And so is the commitment and dedication of the Volunteer Management Committee.",
       image: {
         src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-children-playing.png",
         alt: "Placeholder image 3",
