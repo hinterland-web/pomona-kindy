@@ -21,7 +21,7 @@ type Props = {
   };
   
   export const Header64Defaults: Header64Props = {
-    heading: "Short heading here",
+    heading: "Our Philosophy",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
   };

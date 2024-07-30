@@ -59,7 +59,7 @@ export const Header5Defaults: Header5Props = {
   heading: "Where Imagination Moves Mountains",
   description:
     "We’re a not-for-profit community organisation proudly affiliated with the Crèche and Kindergarten Association of Queensland (C&K)",
-  buttons: [{ title: "Book a Visit" }], 
+  buttons: [{ title: "Enroll Now" }], 
   // { title: "Button", variant: "secondary-alt" }],
   image: {
     src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/kindy-playground-hero.png",

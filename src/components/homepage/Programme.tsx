@@ -22,10 +22,8 @@ export const Layout77 = (props: Layout77Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-200 text-base-white">
       <div className="container grid grid-cols-1 items-start justify-between gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
         <div>
-          <div className="mb-5 md:mb-6">
-         
-          </div>
-          <h2 className="text-5xl font-bold md:text-7xl lg:text-8xl">{heading}</h2>
+          
+          <h2 className="text-base-400 text-5xl font-bold md:text-7xl lg:text-8xl">{heading}</h2>
         </div>
         <div>
           <div>
@@ -38,7 +36,7 @@ export const Layout77 = (props: Layout77Props) => {
                   size={button.size}
                   iconRight={button.iconRight}
                   iconLeft={button.iconLeft}
-                  className="text-base"
+                  className="text-base text-base-cta-primary font-bold text-xl"
                 >
                   {button.title}
                 </Button>

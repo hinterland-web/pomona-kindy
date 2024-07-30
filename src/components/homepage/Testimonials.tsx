@@ -73,7 +73,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
         alt: "",
       },
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+        "It's rare to find a space that incorporate so well into its surrounding nature as is the case at the Pomona Kindy. It feels like the kids are always involved in adventures of discovery and purposeful play.",
       avatar: {
         src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
         alt: "Testimonial avatar 1",

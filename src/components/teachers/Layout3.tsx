@@ -25,7 +25,7 @@ export const Layout3 = (props: Layout3Props) => {
             <p className="md:text-md">{description}</p>
           </div>
           <div>
-            <Image src={image.src} className="w-full object-cover" alt={image.alt || "default alt text"} />
+            <Image src={image.src} className="w-full object-cover" alt={image.alt || "default alt text"} width={100} height={100}/>
           </div>
         </div>
       </div>
