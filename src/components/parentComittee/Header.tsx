@@ -49,14 +49,16 @@ export const Content2Defaults: Content2Props = {
   children: (
     <div>
       <p>
-        The committee is elected by the members of the Kindergarten during an
-        Annual General Meeting (AGM) to manage Kindergarten operations for, and
-        on behalf of the members (normally centre parents). What your committee
-        looks like and how it operates is outlined in your Constitution (or
-        Rules of the Association). It is important that all Committee members
-        have a copy and become familiar with the Constitution when elected. Your
-        Constitution is a legal document and you and the members of your
-        Association must follow the rules it sets out.
+        Joining our committee opens doors to a multitude of opportunities for
+        personal and professional growth.The committee is elected by the members
+        of the Kindergarten during an Annual General Meeting (AGM) to manage
+        Kindergarten operations for, and on behalf of the members (normally
+        centre parents). What your committee looks like and how it operates is
+        outlined in your Constitution (or Rules of the Association). It is
+        important that all Committee members have a copy and become familiar
+        with the Constitution when elected. Your Constitution is a legal
+        document and you and the members of your Association must follow the
+        rules it sets out.
       </p>
 
       <p>

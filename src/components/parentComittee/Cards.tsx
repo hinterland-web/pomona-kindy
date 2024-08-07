@@ -36,27 +36,30 @@ export const Testimonial3 = (props: Testimonial3Props) => {
           </h2>
           <p className="md:text-md">{description}</p>
         </div>
-        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
+        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-4 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="flex flex-col items-center text-center">
+             
               <Image
                 src={testimonial.avatar.src}
                 alt={testimonial.avatar.alt || "default alt text"}
-                width={100}
-                height={100}
-                className="mb-4 size-14 min-h-14 min-w-14 rounded-full object-cover"
+                width={300}
+                height={300}
+                className={`mb-4 size-32 min-h-14 min-w-14 rounded-full object-cover ${
+                  testimonial.name === "Kristina" ? "object-[center_90%]" : ""
+                }`}
               />
               <p className="font-semibold">{testimonial.name}</p>
               <p>
-                <span>{testimonial.position}</span>,{" "}
+                <span>{testimonial.position}</span>{" "}
                 <span>{testimonial.companyName}</span>
               </p>
-
+{/* 
               <blockquote
                 className={`my-6 text-base before:content-['"'] after:content-['"'] md:my-8 md:text-xl`}
               >
                 {testimonial.testimonial}
-              </blockquote>
+              </blockquote> */}
             </div>
           ))}
         </div>
@@ -71,48 +74,78 @@ export const Testimonial3Defaults: Testimonial3Props = {
   testimonials: [
     {
       image: {
-        src: "https://relume-assets.s3.amazonaws.com/webflow-logo.svg",
-        alt: "Webflow logo 1",
+        src: "",
+        alt: "",
       },
       testimonial: "Say Something about what you want out of this",
       avatar: {
-        src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
-        alt: "Testimonial avatar 1",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
+        alt: "2024 Committee President",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
+      name: "Sarah Brown",
+      position: "President",
+      companyName: ""
     },
     {
       image: {
-        src: "https://relume-assets.s3.amazonaws.com/webflow-logo.svg",
-        alt: "Webflow logo 2",
+        src: "",
+        alt: "",
       },
       testimonial:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
       avatar: {
-        src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
-        alt: "Testimonial avatar 2",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1932%20Kristina.jpeg",
+        alt: "2024 Committee Vice President",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
+      name: "Kristina",
+      position: "Vice President",
+      companyName: "",
     },
     {
       image: {
-        src: "https://relume-assets.s3.amazonaws.com/webflow-logo.svg",
-        alt: "Webflow logo 3",
+        src: "",
+        alt: "",
       },
       testimonial:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
       avatar: {
-        src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
-        alt: "Testimonial avatar 3",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1930%20Mel.jpeg",
+        alt: "2024 Committee Secretary",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
+      name: "Mel",
+      position: "Secretary",
+      companyName: "",
     },
+    {
+      image: {
+        src: "",
+        alt: "",
+      },
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+      avatar: {
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1930%20Andre.jpeg",
+        alt: "2024 Committee Treasurer",
+      },
+      name: "André Silva",
+      position: "Treasurer",
+      companyName: "",
+    },
+    // {
+    //   image: {
+    //     src: "",
+    //     alt: "",
+    //   },
+    //   testimonial:
+    //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    //   avatar: {
+    //     src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+    //     alt: "Testimonial avatar 3",
+    //   },
+    //   name: "Name Surname",
+    //   position: "Position",
+    //   companyName: "Company name",
+    // },
   ],
 };
 

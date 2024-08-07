@@ -3,6 +3,8 @@ import Image from "next/image";
 type ImageProps = {
   src: string;
   alt?: string;
+  width: number;
+  height: number;
 };
 
 type Props = {
@@ -25,9 +27,9 @@ export const Content9 = (props: Content9Props) => {
         <div className="mb-12 md:mb-18 lg:mb-20">
           <Image
             src={image.src}
-            width={100}
-            height={100}
-            className="w-full object-cover"
+            width={image.width}
+            height={image.height}
+            className="object-cover w-full"
             alt={image.alt || "default alt text"}
           />
         </div>
@@ -35,7 +37,7 @@ export const Content9 = (props: Content9Props) => {
           <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
-          <div className="prose">{children}</div>
+          <div className="prose text-lg">{children}</div>
         </div>
       </div>
     </section>
@@ -53,24 +55,38 @@ export const Content9Defaults: Content9Props = {
         knowledge.
       </p>
       <p>
-        Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas
-        condimentum mi massa. In tincidunt pharetra consectetur sed duis
-        facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit
-        dictum eget nibh tortor commodo cursus.
+        Our kindergarten stands on Gubbi Gubbi land and we are proud to
+        acknowledge the traditional custodians of our beautiful land. We
+        respectfully embed Aboriginal and Torres Strait Islander ways of being,
+        knowing, thinking and doing into our daily program and practices. We
+        strongly believe that all children have the right to learn through play
+        and know that this is the best way children learn and develop skills,
+        confidence, resilience and knowledge. Educators on staff are highly
+        trained and experienced. They facilitate and guide children’s learning
+        using evidence-based research and knowledge alongside ongoing skill
+        development.
       </p>
       <p>
-        Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet.
-        Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget
-        ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec
-        posuere pharetra odio consequat scelerisque et, nunc tortor. Nulla
-        adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere
-        cursus diam.
+        The uniqueness of each child and their cultural and familial
+        understandings are celebrated and valued. Educators are advocates for
+        the present and future rights of all children and use an environmentally
+        sustainable approach to learning and provides connections to community
+        and cultures. Time is spent developing respectful relationships with our
+        kindergarten families and our local community around Pomona, knowing
+        that these will lead to many positive outcomes for our children.
+      </p>
+      <p>
+        Fairness, respect and an inclusive environment are highly valued
+        outcomes for each child. These values are both modelled and explicitly
+        taught by educators, encouraging children to feel proud and independent
       </p>
     </div>
   ),
   image: {
-    src: "https://relume-assets.s3.amazonaws.com/placeholder-image-landscape.svg",
-    alt: "Placeholder image",
+    src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/front%20gate%20kindy.jpeg",
+    width: 1000,
+    height: 600,
+    alt: "Pomona Kindy front gate",
   },
 };
 

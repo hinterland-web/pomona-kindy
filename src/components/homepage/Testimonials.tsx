@@ -75,7 +75,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
       testimonial:
         "It's rare to find a space that incorporate so well into its surrounding nature as is the case at the Pomona Kindy. It feels like the kids are always involved in adventures of discovery and purposeful play.",
       avatar: {
-        src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1930%20Andre.jpeg",
         alt: "Testimonial avatar 1",
       },
       name: "Andre S.",
@@ -90,7 +90,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
         testimonial:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
         avatar: {
-          src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+          src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1931%20Brodie.jpeg",
           alt: "Testimonial avatar 1",
         },
         name: "Brodie H.",
@@ -105,7 +105,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
         testimonial:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
         avatar: {
-          src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+          src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
           alt: "Testimonial avatar 1",
         },
         name: "Sarah B.",

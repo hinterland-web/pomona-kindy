@@ -1,11 +1,9 @@
-import { Content1 } from "@/components/ourStory/Content";
-
-
+import OurStoryPage from "@/components/ourStory/OurStoryPage";
 
 export default function Story() {
-    return (
-        <>
-            <Content1 />
-        </>
-    );
+  return (
+    <div className=" bg-base-white text-base-400">
+      <OurStoryPage />
+    </div>
+  );
 }
