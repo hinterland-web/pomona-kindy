@@ -31,6 +31,8 @@ export const Content9 = (props: Content9Props) => {
             height={image.height}
             className="object-cover w-full"
             alt={image.alt || "default alt text"}
+            loading="eager"
+            priority={true}
           />
         </div>
         <div className="mx-auto w-full max-w-lg items-center">

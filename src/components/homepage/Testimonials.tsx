@@ -47,7 +47,9 @@ export const Testimonial3 = (props: Testimonial3Props) => {
               <Image
                 src={testimonial.avatar.src}
                 alt={testimonial.avatar.alt || "default alt text"}
-                className="mb-4 size-14 min-h-14 min-w-14 rounded-full object-cover"
+                className={`mb-4 size-24 min-h-14 min-w-14 rounded-full object-cover ${
+                  testimonial.name === "Brodie H." ? "object-[center_90%]" : ""
+                }`}
                 width={80}
                 height={80}
               />

@@ -3,6 +3,8 @@ import Image from "next/image";
 type ImageProps = {
   src: string;
   alt?: string;
+  width: number;
+  height: number;
 };
 
 type Props = {
@@ -23,13 +25,15 @@ export const Content2 = (props: Content2Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white">
       <div className="container">
         <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
-          <div>
+          <div className="mt-10">
             <Image
               src={image.src}
               className="w-full object-cover"
               alt={image.alt || "default alt text"}
-              width={100}
-              height={100}
+              width={image.width}
+              height={image.height}
+              loading="eager"
+              priority={true}
             />
           </div>
           <div>
@@ -73,8 +77,10 @@ export const Content2Defaults: Content2Props = {
     </div>
   ),
   image: {
-    src: "https://relume-assets.s3.amazonaws.com/placeholder-image.svg",
+    src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/bake%20sale%202.jpeg",
     alt: "Placeholder image",
+    width: 300,
+    height: 200,
   },
 };
 
