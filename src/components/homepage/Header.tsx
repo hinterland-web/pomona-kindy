@@ -5,6 +5,8 @@ import type { ImageProps, ButtonProps } from "@relume_io/relume-ui";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import KindyAgeModal from "../ui/KindyAgeModal";
+import EnrollmentFormFilter from "../ui/EnrollmentFormFilter";
 
 type Props = {
   heading: string;
@@ -15,34 +17,7 @@ type Props = {
 
 export type Header5Props = React.ComponentPropsWithoutRef<"section"> & Props;
 
-const Modal = ({
-  isOpen,
-  onClose,
-  children,
-}: {
-  isOpen: boolean;
-  onClose: () => void;
-  children: React.ReactNode;
-}) => {
-  return (
-    <div
-      className={`fixed inset-0 bg-base-400 bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 ease-in-out ${
-        isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-      }`}
-    >
-      <div
-        className={`bg-base-white p-8 rounded-lg max-w-md w-full transition-all duration-300 ease-in-out ${
-          isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"
-        }`}
-      >
-        <button onClick={onClose} className="float-right text-2xl">
-          &times;
-        </button>
-        {children}
-      </div>
-    </div>
-  );
-};
+
 
 export const Header5 = (props: Header5Props) => {
   const { heading, description, buttons, image } = {
@@ -53,6 +28,7 @@ export const Header5 = (props: Header5Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
     <header className="relative px-[5%]">
       <div className="container">
         <div className="flex max-h-[60rem] min-h-svh items-center py-16 md:py-24 lg:py-28">
@@ -92,17 +68,11 @@ export const Header5 = (props: Header5Props) => {
         />
         <div className="absolute inset-0 bg-black/50" />
       </div>
-      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <h2 className="text-2xl mb-4">Enroll Now</h2>
-        <p>
-          Please fill out the enrollment form or contact us for more
-          information.
-        </p>
-        <Link href="/contact">
-          <Button className="mt-4">Contact Us</Button>
-        </Link>
-      </Modal>
+      <KindyAgeModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <EnrollmentFormFilter/>
+      </KindyAgeModal>
     </header>
+    </>
   );
 };
 
