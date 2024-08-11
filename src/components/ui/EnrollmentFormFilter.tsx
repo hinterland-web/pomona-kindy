@@ -4,7 +4,6 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 
 const schema = z.object({
   dateOfBirth: z.string().transform((value) => new Date(value)),
@@ -15,7 +14,7 @@ type FormData = z.infer<typeof schema>;
 const EnrollmentFormFilter: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [isEligible, setIsEligible] = useState<boolean>(false);
-  const router = useRouter();
+
   const submitButtonLink =
     "https://parent-portal.kidsoft.com.au/create-account/pomonakindy/";
   const errorMessageLink =
@@ -38,7 +37,8 @@ const EnrollmentFormFilter: React.FC = () => {
     if (age >= 4) {
       setIsEligible(true);
       setErrorMessage(null);
-      router.push(submitButtonLink);
+
+      window.open(submitButtonLink, "_blank", "noopener,noreferrer");
     } else {
       setIsEligible(false);
       setErrorMessage(
