@@ -1,5 +1,10 @@
+"use client";
+
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
+import EnrollmentFormFilter from "../ui/EnrollmentFormFilter";
+import KindyAgeModal from "../ui/KindyAgeModal";
+import { useState } from "react";
 
 type Props = {
   heading: string;
@@ -7,9 +12,11 @@ type Props = {
   buttons: ButtonProps[];
 };
 
-export type Cta7Props = React.ComponentPropsWithoutRef<"section"> & Partial<Props>;
+export type Cta7Props = React.ComponentPropsWithoutRef<"section"> &
+  Partial<Props>;
 
 export const Cta7 = (props: Cta7Props) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { heading, description, buttons } = {
     ...Cta7Defaults,
     ...props,
@@ -34,12 +41,16 @@ export const Cta7 = (props: Cta7Props) => {
               iconRight={button.iconRight}
               iconLeft={button.iconLeft}
               className="text-lg bg-base-cta-secondary rounded-md  hover:bg-base-white hover:text-base-content"
+              onClick={() => setIsModalOpen(true)}
             >
               {button.title}
             </Button>
           ))}
         </div>
       </div>
+      <KindyAgeModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <EnrollmentFormFilter />
+      </KindyAgeModal>
     </section>
   );
 };
