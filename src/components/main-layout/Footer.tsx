@@ -122,7 +122,7 @@ export const Footer2 = (props: Footer2Props) => {
         <div className="h-px w-full bg-black " />
         <div className="flex flex-col-reverse items-start pb-4 pt-6 text-sm md:justify-start md:pb-0 md:pt-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="flex flex-row items-start md:flex-row md:gap-6 lg:items-center">
-            <p className="mt-8 md:mt-0">{footerText}</p>
+            <p className="mt-8 md:mt-0">Made with ❤️ by <Link className="underline font-bold" href="https://hinterlandweb.com" target="_blank" rel="noopener noreferrer">Hinterland Web</Link>{footerText}</p>
             <div className="grid grid-flow-row grid-cols-[max-content] justify-center gap-x-0 gap-y-4 md:grid-flow-col md:justify-center md:gap-x-6 md:gap-y-0 lg:text-left">
               {footerLinks.map((link, index) => (
                 <p key={`${link.title}-${index}`} className="underline">
@@ -205,7 +205,7 @@ export const Footer2Defaults: Footer2Props = {
     // { url: "#", icon: <BiLogoLinkedinSquare className="size-6" /> },
     // { url: "#", icon: <BiLogoYoutube className="size-6" /> },
   ],
-  footerText: "© 2024 Hinterland Web and Relume React Library. All rights reserved.",
+  footerText: " © 2024 All rights reserved.",
   acknowledgements: "We acknowledge the Kabi Kabi people, the Traditional Custodians of the land upon which we stand, teach and learn. We pay our respects to their Elders, past and present.",
   footerLinks: [
     { title: "Privacy Policy", url: "#" },
