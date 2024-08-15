@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { RxChevronDown } from "react-icons/rx";
 import Link from "next/link";
 import Image from "next/image";
-import cloudflareLoader from "../../../imageLoader"
+import cloudflareLoader from "../../../imageLoader";
 
 type LinkProps = {
   title: string;
@@ -95,7 +95,6 @@ export const Navbar101 = (props: Navbar1Props) => {
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <Link href="/">
             <Image
-            
               src={logo.src}
               alt={logo.alt || "default alt text"}
               width={50}
@@ -261,7 +260,6 @@ export const Navbar1Defaults: Navbar1Props = {
   logo: {
     src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/C%26A_Logo_HI-RES_no_bg.png",
     alt: "Logo image",
-   
   },
   links: [
     {
@@ -274,7 +272,17 @@ export const Navbar1Defaults: Navbar1Props = {
         { title: "Parent Committee", url: "/parent-committee" },
       ],
     },
-    { title: "Facilities", url: "/facilities" },
+
+    {
+      title: "Facilities",
+      url: "/facilities",
+      subLinks: [
+        { title: "Inside", url: "/facilities/inside" },
+        { title: "Outside", url: "/facilities/outside" },
+        { title: "Incursions & Excursions", url: "/facilities/excursions" },
+      ],
+    },
+    { title: "Enrolment & Fees", url: "" },
     { title: "Getting Involved", url: "#" },
     { title: "FAQ", url: "/faq" },
   ],

@@ -82,7 +82,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
         src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
         alt: "2024 Committee President",
       },
-      name: "Sarah Brown",
+      name: "Sarah B.",
       position: "President",
       companyName: ""
     },
@@ -97,7 +97,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
         src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1932%20Kristina.jpeg",
         alt: "2024 Committee Vice President",
       },
-      name: "Kristina",
+      name: "Kristina R.",
       position: "Vice President",
       companyName: "",
     },

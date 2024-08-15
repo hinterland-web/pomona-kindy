@@ -45,14 +45,18 @@ export const Layout423 = (props: Layout423Props) => {
     ...props,
   } as Props;
 
-  const [hoveredFeatureIdx, setHoveredFeatureIdx] = useState<number | null>(null);
+  const [hoveredFeatureIdx, setHoveredFeatureIdx] = useState<number | null>(
+    null
+  );
 
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-300">
       <div className="container text-base-cta-primary">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20 text-primary-text">
           <p className="mb-3 text-lg font-semibold md:mb-4">{tagline}</p>
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">{heading}</h2>
+          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl">
+            {heading}
+          </h2>
           {/* <p className="md:text-md">{description}</p> */}
         </div>
         <div className="flex flex-col items-stretch justify-between gap-6 md:gap-8 lg:flex-row">
@@ -65,18 +69,21 @@ export const Layout423 = (props: Layout423Props) => {
               onMouseLeave={() => setHoveredFeatureIdx(null)}
             >
               <div className="absolute inset-0 flex size-full flex-col items-center justify-center self-start">
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/70" />
+
                 <Image
                   src={feature.image.src}
                   alt={feature.image.alt || "default alt text"}
-                  className="size-full object-cover"
-                 fill={true}
+                  className="size-full object-cover opacity-80"
+                  fill={true}
                 />
               </div>
               <div className="group relative flex h-full min-h-[70vh] flex-col justify-end p-6 md:p-8">
                 <div className="lg:absolute lg:inset-0 lg:z-0 lg:transition-all lg:duration-300 lg:group-hover:bg-black/50" />
-                <div className="z-10 " >
-                  <p className="mb-2 font-semibold text-base-white">{feature.tagline}</p>
+                <div className="z-10 ">
+                  <p className="mb-2 font-semibold text-base-white">
+                    {feature.tagline}
+                  </p>
                   <h3 className="text-2xl font-bold text-base-white  md:text-3xl md:leading-[1.3] lg:text-4xl">
                     {feature.heading}
                   </h3>
@@ -91,7 +98,9 @@ export const Layout423 = (props: Layout423Props) => {
                       exit="hidden"
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      <p className="mt-5 text-text-alternative md:mt-6">{feature.description}</p>
+                      <p className="mt-5 text-text-alternative md:mt-6">
+                        {feature.description}
+                      </p>
                       <div className="mt-6 md:mt-8">
                         <Button
                           variant={feature.button.variant}
@@ -107,7 +116,9 @@ export const Layout423 = (props: Layout423Props) => {
                   )}
                 </AnimatePresence>
                 <div className="lg:hidden">
-                  <p className="mt-5 text-text-alternative md:mt-6">{feature.description}</p>
+                  <p className="mt-5 text-text-alternative md:mt-6">
+                    {feature.description}
+                  </p>
                   <div className="mt-6 md:mt-8">
                     <Button
                       variant={feature.button.variant}
@@ -116,7 +127,7 @@ export const Layout423 = (props: Layout423Props) => {
                       iconLeft={feature.button.iconLeft}
                       className="text-text-alternative"
                     >
-                      Button
+                      Learn More
                     </Button>
                   </div>
                 </div>
@@ -130,8 +141,9 @@ export const Layout423 = (props: Layout423Props) => {
 };
 
 export const Layout423Defaults: Layout423Props = {
-  tagline: "Our Community Our Kindy",
-  heading: "Discover a world of learning and play at our Community Kindergarten",
+  tagline: "Our Community, Our Kindy",
+  heading:
+    "Discover a world of learning and play at our Community Kindergarten",
   description: "Where Imagination moves mountains.",
   features: [
     {

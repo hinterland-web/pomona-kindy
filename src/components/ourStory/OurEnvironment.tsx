@@ -31,13 +31,13 @@ export const Content1 = (props: Content1Props) => {
             </h2>
             <div className="prose">{children}</div>
           </div>
-          <div>
+          <div className="relative aspect-[5/4] w-full">
             <Image
               src={image.src}
-              width={image.width}
-              height={image.height}
-              className="w-full h-auto object-cover"
+              className="object-cover"
               alt={image.alt || ""}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -70,7 +70,7 @@ export const Content1Defaults: Content1Props = {
     </div>
   ),
   image: {
-    src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-children-playing.png",
+    src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/kindy-playground-hero.png",
     alt: "Placeholder image",
     width: 800,
     height: 400,

@@ -53,8 +53,7 @@ export const Content1Defaults: Content1Props = {
       <p>
         Our kindergarten delivers C&K Quality Kindergarten Program.
         Kindergarten, also known as pre-prep or preschool, is a program for
-        children who are turning 4 by June 30 in the year before they attend
-        school. C&K&apos;s kindy programs are government-approved and led by
+        children who are turning 4 by June 30 in the year before Prep. C&K&apos;s kindy programs are government-approved and led by
         experienced and university qualified teachers. Our program supports
         children&apos;s curiosity, creativity, problem solving, resilience and
         real-world knowledge and skills.
@@ -67,14 +66,13 @@ export const Content1Defaults: Content1Props = {
         early childhood curriculum. We&apos;ve designed our indoor and outdoor
         spaces to ignite imaginations and nurture healthy minds and bodies.
         Learning through play is an integral part of our education program. Our
-        educators skilfully enrich and extend on children&apos;s play
+        educators skillfully enrich and extend on children&apos;s play
         experiences, creating a learning program that is tailored and meaningful
         for your child.
       </p>
       <p>
-        Your child&apos;s learning journey is shared with you via conversations with
-        your child&apos;s educators and through written documentation in your centre,
-        and in some centres through StoryPark (an app and website).
+        Your child&apos;s learning journey is shared with you via conversations between you and our
+        ducators and through written documentation in our centre.
       </p>
     </div>
   ),

@@ -56,7 +56,7 @@ export const Cta7 = (props: Cta7Props) => {
 };
 
 export const Cta7Defaults: Cta7Props = {
-  heading: "Enroll now for 2025",
+  heading: "Enrol now for 2025",
   description: "We are now accepting enrolments for 2025.",
   buttons: [{ title: "Enrol Now", variant: "secondary" }],
 };
