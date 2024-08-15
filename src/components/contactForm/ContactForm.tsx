@@ -69,7 +69,7 @@ export const Contact5 = (props: Contact5Props) => {
             </div>
             <div className="flex items-center gap-4">
               <BiPhone className="size-6 flex-none" />
-              <p>{phone}</p>
+              <Link href={`tel:${phone}`}>{phone}</Link>
             </div>
             <div className="flex items-center gap-4">
               <BiMap className="size-6 flex-none" />

@@ -68,6 +68,7 @@ export const Header5 = (props: Header5Props) => {
             fill={true}
             loading="eager"
             priority={true}
+            placeholder="blur"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
