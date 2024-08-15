@@ -206,7 +206,7 @@ export const Footer2Defaults: Footer2Props = {
     // { url: "#", icon: <BiLogoYoutube className="size-6" /> },
   ],
   footerText: " © 2024 All rights reserved.",
-  acknowledgements: "We acknowledge the Kabi Kabi people, the Traditional Custodians of the land upon which we stand, teach and learn. We pay our respects to their Elders, past and present.",
+  acknowledgements: "We acknowledge the Gubbi Gubbi people, the Traditional Custodians of the land upon which we stand, teach and learn. We pay our respects to their Elders, past and present.",
   footerLinks: [
     { title: "Privacy Policy", url: "#" },
     { title: "Terms of Service", url: "#" },
