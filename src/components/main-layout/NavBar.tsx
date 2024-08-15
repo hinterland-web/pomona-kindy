@@ -23,6 +23,7 @@ type Props = {
   logo: ImageProps;
   links: MenuLinkProps[];
   buttons: ButtonProps[];
+  banner: ImageProps;
 };
 
 export type Navbar1Props = React.ComponentPropsWithoutRef<"section"> & Props;
@@ -82,7 +83,7 @@ const dropDownVariants = {
 };
 
 export const Navbar101 = (props: Navbar1Props) => {
-  const { logo, links, buttons } = {
+  const { logo, links, buttons, banner } = {
     ...Navbar1Defaults,
     ...props,
   } as Props;
@@ -101,6 +102,7 @@ export const Navbar101 = (props: Navbar1Props) => {
               height={50}
             />
           </Link>
+         
           <button
             className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -260,6 +262,10 @@ export const Navbar1Defaults: Navbar1Props = {
   logo: {
     src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/C%26A_Logo_HI-RES_no_bg.png",
     alt: "Logo image",
+  },
+  banner: {
+    src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/QLD-Gov-Tick-Logo-landscape-for-navbar.png",
+    alt: "Free Kindy",
   },
   links: [
     {

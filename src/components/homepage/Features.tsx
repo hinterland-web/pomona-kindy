@@ -7,6 +7,7 @@ import { useState } from "react";
 import { RxChevronRight } from "react-icons/rx";
 import Image from "next/image";
 import { inherits } from "util";
+import Banner from "@/components/ui/Banner";
 
 type FeatureProps = {
   tagline: string;
@@ -51,6 +52,7 @@ export const Layout423 = (props: Layout423Props) => {
 
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-300">
+     
       <div className="container text-base-cta-primary">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20 text-primary-text">
           <p className="mb-3 text-lg font-semibold md:mb-4">{tagline}</p>
