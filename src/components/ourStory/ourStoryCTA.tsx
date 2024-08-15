@@ -2,7 +2,7 @@
 
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
-import EnrollmentFormFilter from "../ui/EnrollmentFormFilter";
+import EnrollmentInfoLinks from "../ui/EnrollmentInfoLinks";
 import KindyAgeModal from "../ui/KindyAgeModal";
 import { useState } from "react";
 
@@ -49,16 +49,16 @@ export const Cta7 = (props: Cta7Props) => {
         </div>
       </div>
       <KindyAgeModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <EnrollmentFormFilter />
+        <EnrollmentInfoLinks />
       </KindyAgeModal>
     </section>
   );
 };
 
 export const Cta7Defaults: Cta7Props = {
-  heading: "Enroll now for 2025",
+  heading: "Enrol now for 2025",
   description: "We are now accepting enrolments for 2025.",
-  buttons: [{ title: "Enroll", variant: "secondary" }],
+  buttons: [{ title: "Enrol Now", variant: "secondary" }],
 };
 
 Cta7.displayName = "Cta7";

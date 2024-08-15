@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import KindyAgeModal from "../ui/KindyAgeModal";
 import EnrollmentFormFilter from "../ui/EnrollmentFormFilter";
+import EnrollmentInfoLinks from "../ui/EnrollmentInfoLinks";
 
 type Props = {
   heading: string;
@@ -50,8 +51,12 @@ export const Header5 = (props: Header5Props) => {
                   >
                     {button.title}
                   </Button>
+                  
                 ))}
               </div>
+              <span className="ml-2 text-xs text-text-alternative">
+                *Also click if you are unsure whether your child is eligible
+              </span>
             </div>
           </div>
         </div>
@@ -70,7 +75,7 @@ export const Header5 = (props: Header5Props) => {
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
         >
-          <EnrollmentFormFilter />
+          <EnrollmentInfoLinks />
         </KindyAgeModal>
       </header>
     </>
@@ -81,7 +86,7 @@ export const Header5Defaults: Header5Props = {
   heading: "Where Imagination Moves Mountains",
   description:
     "We’re a not-for-profit community organisation proudly affiliated with the Crèche and Kindergarten Association of Queensland (C&K)",
-  buttons: [{ title: "Enroll Now" }],
+  buttons: [{ title: "Enrol Now" }],
   // { title: "Button", variant: "secondary-alt" }],
   image: {
     src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/kindy-playground-hero.png",

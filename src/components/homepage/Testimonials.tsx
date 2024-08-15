@@ -18,7 +18,8 @@ type Props = {
   testimonials: Testimonial[];
 };
 
-export type Testimonial3Props = React.ComponentPropsWithoutRef<"section"> & Props;
+export type Testimonial3Props = React.ComponentPropsWithoutRef<"section"> &
+  Props;
 
 export const Testimonial3 = (props: Testimonial3Props) => {
   const { heading, description, testimonials } = {
@@ -29,7 +30,9 @@ export const Testimonial3 = (props: Testimonial3Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">{heading}</h1>
+          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            {heading}
+          </h1>
           <p className="md:text-md">{description}</p>
         </div>
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
@@ -38,13 +41,12 @@ export const Testimonial3 = (props: Testimonial3Props) => {
               key={`${testimonial.testimonial}-${index}`}
               className="flex flex-col items-center text-center"
             >
-              
               <blockquote
                 className={`my-6 text-md font-bold leading-[1.4] before:content-['"'] after:content-['"'] md:my-8 md:text-xl`}
               >
                 {testimonial.testimonial}
               </blockquote>
-              <Image
+              {/* <Image
                 src={testimonial.avatar.src}
                 alt={testimonial.avatar.alt || "default alt text"}
                 className={`mb-4 size-24 min-h-14 min-w-14 rounded-full object-cover ${
@@ -52,7 +54,7 @@ export const Testimonial3 = (props: Testimonial3Props) => {
                 }`}
                 width={80}
                 height={80}
-              />
+              /> */}
               <p className="font-semibold">{testimonial.name}</p>
               {/* <p>
                 <span>{testimonial.position}</span><span>{testimonial.companyName}</span>
@@ -85,34 +87,34 @@ export const Testimonial3Defaults: Testimonial3Props = {
       companyName: "",
     },
     {
-        image: {
-          src: "",
-          alt: "",
-        },
-        testimonial:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-        avatar: {
-          src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1931%20Brodie.jpeg",
-          alt: "Testimonial avatar 1",
-        },
-        name: "Brodie H.",
-        position: "",
-        companyName: "",
+      image: {
+        src: "",
+        alt: "",
       },
-      {
-        image: {
-          src: "",
-          alt: "",
-        },
-        testimonial:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
-        avatar: {
-          src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
-          alt: "Testimonial avatar 1",
-        },
-        name: "Sarah B.",
-        position: "",
-        companyName: "",
-      }
+      testimonial:
+        "We initially decided against kindy this year as we will be homeschoolong next year, but we popped in on their opening day and changed our mind straight away! The staff were so welcoming and we loved that it feels like a big community. Not only is our daughter loving it, but we have been lucky enough to make some great friends through kindy too. Would highly recommend!",
+      avatar: {
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1931%20Brodie.jpeg",
+        alt: "Testimonial avatar 1",
+      },
+      name: "Brodie H.",
+      position: "",
+      companyName: "",
+    },
+    {
+      image: {
+        src: "",
+        alt: "",
+      },
+      testimonial:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+      avatar: {
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
+        alt: "Testimonial avatar 1",
+      },
+      name: "Sarah B.",
+      position: "",
+      companyName: "",
+    },
   ],
 };

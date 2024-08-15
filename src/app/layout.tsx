@@ -21,7 +21,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      
       <body className={mulish.className}>
         <Navbar101 {...Navbar1Defaults} />
 

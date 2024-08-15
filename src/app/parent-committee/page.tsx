@@ -10,7 +10,7 @@ export default function ParentCommittee() {
     <div className="bg-base-white text-base-400">
       <Content2 />
       <Testimonial3 />
-      <Cta7 />
+      {/* <Cta7 /> */}
     </div>
   );
 }

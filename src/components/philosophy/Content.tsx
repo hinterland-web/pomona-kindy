@@ -63,7 +63,7 @@ export const Content9Defaults: Content9Props = {
         knowing, thinking and doing into our daily program and practices. We
         strongly believe that all children have the right to learn through play
         and know that this is the best way children learn and develop skills,
-        confidence, resilience and knowledge. Educators on staff are highly
+        confidence, resilience and knowledge. Our Educators are highly
         trained and experienced. They facilitate and guide children’s learning
         using evidence-based research and knowledge alongside ongoing skill
         development.

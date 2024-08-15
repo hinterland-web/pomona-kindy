@@ -39,6 +39,7 @@ const EnrollmentFormFilter: React.FC = () => {
       setErrorMessage(null);
 
       window.open(submitButtonLink, "_blank", "noopener,noreferrer");
+      
     } else {
       setIsEligible(false);
       setErrorMessage(

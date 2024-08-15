@@ -40,6 +40,10 @@ export const Faq4 = (props: Faq4Props) => {
     ...Faq4Defaults,
     ...props,
   } as Props;
+
+  const handbookLink =
+    "https://drive.google.com/file/d/1i-LFRk3Nmq8av_PuliLl1PBAZifPtua8/view?usp=sharing";
+
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
       <div className="container mx-auto max-w-lg">
@@ -73,22 +77,28 @@ export const Faq4 = (props: Faq4Props) => {
             </AccordionItem>
           ))}
         </Accordion>
+
         <div className="mx-auto mt-12 max-w-md text-center md:mt-18 lg:mt-20">
           <h4 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
             {footerHeading}
           </h4>
-          <p className="md:text-md">{footerDescription}</p>
+          <p className="md:text-md">
+            {footerDescription} Otherwise{" "}
+            <Link href="/contact" className="font-bold">
+              get in touch with us
+            </Link>
+          </p>
           <div className="mt-6 md:mt-8">
-            <Link href="/contact">
-            <Button
-              variant={button.variant}
-              size={button.size}
-              iconRight={button.iconRight}
-              iconLeft={button.iconLeft}
-              className="text-lg bg-base-cta-secondary rounded-md  hover:bg-base-white hover:text-base-content"
-            >
-              {button.title}
-            </Button>
+            <Link href={handbookLink} target="_blank">
+              <Button
+                variant={button.variant}
+                size={button.size}
+                iconRight={button.iconRight}
+                iconLeft={button.iconLeft}
+                className="text-lg bg-base-cta-secondary rounded-md  hover:bg-base-white hover:text-base-content"
+              >
+                {button.title}
+              </Button>
             </Link>
           </div>
         </div>
@@ -102,10 +112,33 @@ export const Faq4Defaults: Faq4Props = {
   description:
     "Here you will find answers to the most common questions about our Kindergarten. If something is still unclear, please don't hesitate to contact us.",
   questions: [
+    // {
+    //   title: "What is the process for handling injuries and incidents?",
+    //   answer:
+    //     "In the event of any child-related incident, we will contact you for all significant incidents, and you may be asked to collect your child. Teachers/educators will continue to monitor and care for your child until they are collected. A detailed incident record will be completed for you to review and sign at the end of your child’s day. If your child requires medical treatment beyond immediate First Aid, and we are unable to contact you, we will ensure your child is cared for and comforted, and contact your emergency contacts or call an ambulance. Please ensure your list of emergency contacts is always up to date.",
+    // },
     {
-      title: "What is the process for handling injuries and incidents?",
+      title: "What age should my child attend kindergarten?",
       answer:
-        "In the event of any child-related incident, we will contact you for all significant incidents, and you may be asked to collect your child. Teachers/educators will continue to monitor and care for your child until they are collected. A detailed incident record will be completed for you to review and sign at the end of your child’s day. If your child requires medical treatment beyond immediate First Aid, and we are unable to contact you, we will ensure your child is cared for and comforted, and contact your emergency contacts or call an ambulance. Please ensure your list of emergency contacts is always up to date.",
+        "Generally, your child should be turning 4 years old by 30 June. Although sometimes older and younger children are accepted.",
+    },
+    {
+      title:
+        "What if my child is not ready for Prep after their year at Kindy?",
+      answer:
+        "If you and/or the kindy Director/Teacher do not believe your child is ready to move onto Prep at the end of their kindy year, delayed exit from kindy can be applied for, and your child may do a second year at kindy.  Please speak to our Director/Teacher regarding the process for delayed exit from kindy.",
+    },
+
+    {
+      title: "What days do children attend?",
+      answer:
+        "We cater for two groups of children aged between 3.5 and 4.5 years. Each group attends for a five day fortnight: Mari Group - Monday / Tuesday / alternate Wednesdays. Gulla Group - alternate Wednesdays / Thursday / Friday",
+    },
+
+    {
+      title: "Do you provide meals?",
+      answer:
+        "We do not provide meals. Parents and guardians are encouraged to provide a healthy lunchbox (no chips, chocolate or lollies, please) and a separate piece of fruit. There are three breaks for meals (break times are approximate): Fruit Snack at around 9.30am, First Lunch at around 11am (?) and a second meal break at approx 1pm(?). Please ensure all lunchboxes are labeled clearly with your child’s full name. Please do not send your child with an insulated lunch bag. ",
     },
     {
       title: "What is the procedure for bringing healthy meals?",
@@ -121,7 +154,7 @@ export const Faq4Defaults: Faq4Props = {
     {
       title: "What should I know about excursions and visitors?",
       answer:
-        "From time to time, your child might go out into the community on an excursion to places like the local school, nearby nature spaces, the library, or the museum. Visitors may also be invited to share experiences and activities with your child. We will always inform you in advance about excursions or visitors, and you are welcome to join us. Please see our Excursions procedures for further information.",
+        " We have regular educational incursions ranging from presentations, to cultural showcases and hands-on workshops that align with the Early Years Learning Framework. Incursions are included as part of the Free Kindy program and there are no additional out-of-pocket expenses for parents/carers. Make sure to check upcoming incursions as advertised in the regular program newsletter. ",
     },
     {
       title: "What are the fees and membership requirements?",
@@ -131,7 +164,7 @@ export const Faq4Defaults: Faq4Props = {
     {
       title: "What is the sun safety policy?",
       answer:
-        "Sun safety is important, and we ask that your child comes to the centre with a legionnaire-style or broad-brimmed hat each day. Apply sunscreen to your child at home or immediately upon arrival at the centre, and record this application on the sunscreen register. Teachers/educators will reapply sunscreen as needed.",
+        "We are a SunSafe Kindy. Children’s shirts should have sleeves (no singlets, please) and a hat when outdoors. Please bring 2-3 spare sets of play clothing (including underwear) as playtime at Kindy can sometimes get messy!Sun safety is important, and we ask that your child comes to the centre with a legionnaire-style or broad-brimmed hat each day. Apply sunscreen to your child at home or immediately upon arrival at the centre, and record this application on the sunscreen register. Teachers/educators will reapply sunscreen as needed.",
     },
     {
       title: "How are diverse learning needs and medical conditions managed?",
@@ -152,13 +185,19 @@ export const Faq4Defaults: Faq4Props = {
     {
       title: "What are the centre's operating hours for drop-off and pick-up?",
       answer:
-        "In the morning, our gates will be open from 8.30 am and will close at 9.30 am. In the afternoon, our gate will be open from 2 pm to 2.30 pm to ensure the safety of the children. If you need to access the kindergarten at other times, please talk with the educators.",
+        "The center will open at 8:30am and close at 2:30pm. All children are expected to have left the premises by 2:30pm so please arrive early to ensure this is possible.",
+    },
+    {
+      title: "Is there a uniform?",
+      answer:
+        "No, we do not enforce a uniform. However,We have Hats and T Shirts available for purchase, these are not mandatory. Hats $15, T-Shirts $20. Payment can be either cash or bank transfer. ",
     },
   ],
   footerHeading: "Still have questions?",
-  footerDescription: "We are here to help you.",
+  footerDescription:
+    "Have a look into the Family Handbook by clicking the button below.",
   button: {
-    title: "Get in Touch!",
+    title: "Family Handbook",
     variant: "primary",
   },
 };
