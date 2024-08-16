@@ -25,6 +25,9 @@ export const Header5 = (props: Header5Props) => {
   } as Props;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const blurDataURL = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsnbGuHgAF4QJUPmMkGgAAAABJRU5ErkJggg=="
+
 
   return (
     <>
@@ -69,6 +72,7 @@ export const Header5 = (props: Header5Props) => {
             loading="eager"
             priority={true}
             placeholder="blur"
+            blurDataURL={blurDataURL}
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>

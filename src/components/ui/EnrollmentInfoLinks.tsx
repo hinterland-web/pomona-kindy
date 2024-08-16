@@ -26,7 +26,7 @@ const EnrollmentInfoLinks: React.FC = () => {
               href={calculatorLink}
               target="_blank"
             >
-              calculator
+              calculator.
             </Link>
           </li>
           <li>
