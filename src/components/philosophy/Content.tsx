@@ -80,7 +80,7 @@ export const Content9Defaults: Content9Props = {
       <p>
         Fairness, respect and an inclusive environment are highly valued
         outcomes for each child. These values are both modelled and explicitly
-        taught by educators, encouraging children to feel proud and independent
+        taught by educators, encouraging children to feel proud and independent.
       </p>
     </div>
   ),

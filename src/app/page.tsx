@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <Header5 {...Header5Defaults} />
-      <Banner />
+     
       <Layout423 {...Layout423Defaults} />
       <Layout77 {...Layout77Defaults} />
       <Testimonial3 {...Testimonial3Defaults} />

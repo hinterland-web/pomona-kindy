@@ -7,9 +7,12 @@ const Banner: React.FC = () => {
   const bannerImage =
     "https://pub-31971714d5324882b00b0345130560dd.r2.dev/QLD-Gov-Tick-Logo-landscape-for-navbar.png";
   
+
+  
+  
   return (
-    <div className="w-full bg-base-white py-2 my-2">
-      <div className="container mx-auto flex justify-center items-center">
+    <div className="w-full py-2 my-2  rounded-xl relative">
+      <div className="container mx-auto flex justify-center items-center px-4">
         <Image
           src={bannerImage} // Replace with your logo path
           alt="Company Logo"

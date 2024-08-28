@@ -8,6 +8,7 @@ import Image from "next/image";
 import KindyAgeModal from "../ui/KindyAgeModal";
 import EnrollmentFormFilter from "../ui/EnrollmentFormFilter";
 import EnrollmentInfoLinks from "../ui/EnrollmentInfoLinks";
+import Banner from "../ui/Banner";
 
 type Props = {
   heading: string;
@@ -25,9 +26,9 @@ export const Header5 = (props: Header5Props) => {
   } as Props;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  const blurDataURL = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsnbGuHgAF4QJUPmMkGgAAAABJRU5ErkJggg=="
 
+  const blurDataURL =
+    "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsnbGuHgAF4QJUPmMkGgAAAABJRU5ErkJggg==";
 
   return (
     <>
@@ -54,7 +55,6 @@ export const Header5 = (props: Header5Props) => {
                   >
                     {button.title}
                   </Button>
-                  
                 ))}
               </div>
               <span className="ml-2 text-xs text-text-alternative">
@@ -63,6 +63,7 @@ export const Header5 = (props: Header5Props) => {
             </div>
           </div>
         </div>
+      
         <div className="absolute inset-0 -z-10">
           <Image
             src={image.src}
