@@ -1,5 +1,5 @@
-import { Gallery8 } from "./Gallery";
-import { Layout90 } from "./Header";
+import { Gallery8 } from "./GalleryInside";
+import { Layout90 } from "./HeaderInside";
 
 export default function FacilitiesInside() {
   return (
