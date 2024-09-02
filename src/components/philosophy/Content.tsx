@@ -24,11 +24,11 @@ export const Content9 = (props: Content9Props) => {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-      
         <div className="mx-auto w-full max-w-lg items-center">
           <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
+          <p className="text-sm my-4">Last reviewed: 25 April 2024</p>
           <div className="prose text-lg">{children}</div>
         </div>
         <div className="mb-12 md:mb-18 lg:mb-20 mt-10">
@@ -64,9 +64,9 @@ export const Content9Defaults: Content9Props = {
         knowing, thinking and doing into our daily program and practices. We
         strongly believe that all children have the right to learn through play
         and know that this is the best way children learn and develop skills,
-        confidence, resilience and knowledge. Our Educators are highly
-        trained and experienced. They facilitate and guide children’s learning
-        using evidence-based research and knowledge alongside ongoing skill
+        confidence, resilience and knowledge. Our Educators are highly trained
+        and experienced. They facilitate and guide children’s learning using
+        evidence-based research and knowledge alongside ongoing skill
         development.
       </p>
       <p>
@@ -81,7 +81,9 @@ export const Content9Defaults: Content9Props = {
       <p>
         Fairness, respect and an inclusive environment are highly valued
         outcomes for each child. These values are both modelled and explicitly
-        taught by educators, encouraging children to feel proud and independent.
+        taught by educators, encouraging children to feel proud and independent
+        and secure in the knowledge that we all belong at Pomona & District
+        Kindergarten.
       </p>
     </div>
   ),

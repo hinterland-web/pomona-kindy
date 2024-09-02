@@ -22,7 +22,7 @@ export const Layout44 = (props: Layout44Props) => {
   return (
     <header className="relative px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container grid grid-cols-1 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20 lg:gap-y-16">
-        <h3 className="mb-5 text-4xl font-bold leading-[1.2] text-base-cta-primary md:mb-6 md:text-5xl lg:text-6xl">
+        <h3 className="mb-5 text-4xl font-black leading-[1.2] text-base-cta-primary md:mb-6 md:text-5xl lg:text-6xl">
           {heading}
         </h3>
         <p className="text-base text-text-alternative md:text-md">

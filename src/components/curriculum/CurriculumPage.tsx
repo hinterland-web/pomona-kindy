@@ -32,13 +32,13 @@ export default function Curriculum(props: CurriculumProps) {
   const alt = "Enrolment 2025 brochure";
 
   return (
-    <section className="">
+    <section className="mt-10">
       <div className="container">
         <div className="mx-auto w-full max-w-lg p-4 md:p-0">
-          <h1 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
+          <h1 className="mb-10 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             Our Curriculum
           </h1>
-          <h2 className="mb-5 text-lg font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="mb-5 text-4xl font-black">
             {inclusive}
           </h2>
           <div className="prose text-lg">{children}</div>
@@ -155,7 +155,7 @@ export const CurriculumDefaults: CurriculumProps = {
       </p>
       <p>
         You will see a range of different displays and records of your child’s
-        learning throughout your centre. 
+        learning throughout your centre.
       </p>
       <p>
         We encourage you to take some time to look at the program and add your

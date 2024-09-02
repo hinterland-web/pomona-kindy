@@ -45,10 +45,8 @@ export const Content3 = (props: Content1Props) => {
               <div className="prose text-lg">{children}</div>
               <LearnMoreButton {...LearnMoreButtonDefaults} />
             </div>
-            
           </div>
         </div>
-      
       </section>
       <Banner />
     </>
@@ -70,12 +68,12 @@ export const Content1Defaults: Content1Props = {
       </p>
       <p>
         C&K knows that children do not learn in isolation, so learning is
-        approached as a collaborative relationship between teachers, eaducators,
+        approached as a collaborative relationship between teachers, educators,
         children and families. At C&K we believe children are powerful learners,
         active citizens, thinkers and theorisers - this is at the heart of our
         early childhood curriculum. We&apos;ve designed our indoor and outdoor
         spaces to ignite imaginations and nurture healthy minds and bodies.
-        Learning through play is an integral part of our education program. 
+        Learning through play is an integral part of our education program.
       </p>
       <p>
         Your child&apos;s learning journey is shared with you via conversations

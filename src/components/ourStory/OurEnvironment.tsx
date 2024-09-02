@@ -58,8 +58,8 @@ export const Content1Defaults: Content1Props = {
         nurture their curiosity.
       </p>
       <p>
-        We recently received a brand-new, nature-inspired playground, crafted
-        with care by Bespoke Playgrounds. This enchanting addition offered our
+        We recently received a nature-inspired playground, crafted
+        with care by Bespoke Playgrounds in 2023, with generous support of FRRR and Community Gambling Benefit Fund grants. This enchanting addition offered our
         children the opportunity to immerse themselves in the wonders of the
         natural world right here at our kindergarten. From climbing to
         exploring, digging, and discovering, this playground was designed to
