@@ -23,7 +23,7 @@ export const Layout77 = (props: Layout77Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-400 text-base-white">
       <div className="container grid grid-cols-1 items-start justify-between gap-x-12 gap-y-8 md:grid-cols-2 md:gap-x-12 md:gap-y-8 lg:gap-x-20">
         <div>
-          <h2 className="text-base-cta-primary text-5xl font-bold md:text-7xl lg:text-8xl">
+          <h2 className="text-base-cta-primary text-5xl font-black md:text-7xl lg:text-8xl">
             {heading}
           </h2>
         </div>

@@ -16,8 +16,6 @@ type Props = {
 export type Gallery8Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
-
-
 const imageNames = [
   "pomona-kindy-inside-crafts.JPG",
   "pomona-kindy-inside-dream-catcher.JPG",
@@ -86,8 +84,9 @@ export const Gallery8 = (props: Gallery8Props) => {
 };
 
 export const Gallery8Defaults: Gallery8Props = {
-  heading: "Image Gallery",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  heading: "Inside Our Kindy",
+  description:
+    "Joyful moments, nurturing environments. Dive into a vibrant collection of moments that capture the essence of our kindergarten.",
   // images: [
   //   {
   //     url: "#",

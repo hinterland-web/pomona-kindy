@@ -48,22 +48,49 @@ export const Content8Defaults: Content8Props = {
   children: (
     <div>
       <p>
-        NICE LOOKING TABLE HERE
-      </p>
-      {/* <p>
-        Nunc sed faucibus bibendum feugiat sed interdum. Ipsum egestas
-        condimentum mi massa. In tincidunt pharetra consectetur sed duis
-        facilisis metus. Etiam egestas in nec sed et. Quis lobortis at sit
-        dictum eget nibh tortor commodo cursus.
+        With the exception of our one-off enrolment fee, payable per child per
+        year, there should be no out-of-pocket fees for eligible-aged kindy
+        children from 2025 onwards.{" "}
       </p>
       <p>
-        Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet.
-        Nam elementum urna nisi aliquet erat dolor enim. Ornare id morbi eget
-        ipsum. Aliquam senectus neque ut id eget consectetur dictum. Donec
-        posuere pharetra odio consequat scelerisque et, nunc tortor. Nulla
-        adipiscing erat a erat. Condimentum lorem posuere gravida enim posuere
-        cursus diam.
-      </p> */}
+        The enrolment fee is payable upon acceptance of this position, this fee
+        is for your child’s enrolment and administration.
+      </p>
+      <p>
+        Term Fees are fully subsidised by the QLD government for eligible-aged
+        children in 2024. Children who are not eligible for subsidised
+        placements (unfunded) are charged at 10% increase on the daily rate.
+      </p>
+      <table className="min-w-full text-center">
+        <thead>
+          <tr>
+            <th className="bg-base-cta-primary border font-bold border-base-400 px-4 py-2">
+              What
+            </th>
+            <th className="bg-base-cta-primary border font-bold border-base-400 px-4 py-2">
+              How much
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="border border-base-400 px-4 py-2">Enrolment fee</td>
+            <td className="border border-base-400 px-4 py-2">$100</td>
+          </tr>
+          <tr>
+            <td className="border border-base-400 px-4 py-2">
+              Daily fee
+            </td>
+            <td className="border border-base-400 px-4 py-2">$56.21</td>
+          </tr>
+          <tr>
+            <td className="border border-base-400 px-4 py-2">
+              Total Term fee
+            </td>
+            <td className="border border-base-400 px-4 py-2">$1,405</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   ),
 };

@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Banner from "@/components/ui/Banner";
+import Link from "next/link";
+import { LearnMoreButton, LearnMoreButtonDefaults } from "../ui/Button";
 
 type ImageProps = {
   src: string;
@@ -37,13 +39,16 @@ export const Content3 = (props: Content1Props) => {
               />
             </div>
             <div>
-              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
                 {heading}
               </h2>
-              <div className="prose">{children}</div>
+              <div className="prose text-lg">{children}</div>
+              <LearnMoreButton {...LearnMoreButtonDefaults} />
             </div>
+            
           </div>
         </div>
+      
       </section>
       <Banner />
     </>
@@ -70,10 +75,7 @@ export const Content1Defaults: Content1Props = {
         active citizens, thinkers and theorisers - this is at the heart of our
         early childhood curriculum. We&apos;ve designed our indoor and outdoor
         spaces to ignite imaginations and nurture healthy minds and bodies.
-        Learning through play is an integral part of our education program. Our
-        educators skillfully enrich and extend on children&apos;s play
-        experiences, creating a learning program that is tailored and meaningful
-        for your child.
+        Learning through play is an integral part of our education program. 
       </p>
       <p>
         Your child&apos;s learning journey is shared with you via conversations

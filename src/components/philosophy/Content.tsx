@@ -24,7 +24,14 @@ export const Content9 = (props: Content9Props) => {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-        <div className="mb-12 md:mb-18 lg:mb-20">
+      
+        <div className="mx-auto w-full max-w-lg items-center">
+          <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
+            {heading}
+          </h2>
+          <div className="prose text-lg">{children}</div>
+        </div>
+        <div className="mb-12 md:mb-18 lg:mb-20 mt-10">
           <Image
             src={image.src}
             width={image.width}
@@ -34,12 +41,6 @@ export const Content9 = (props: Content9Props) => {
             loading="eager"
             priority={true}
           />
-        </div>
-        <div className="mx-auto w-full max-w-lg items-center">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            {heading}
-          </h2>
-          <div className="prose text-lg">{children}</div>
         </div>
       </div>
     </section>

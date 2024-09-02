@@ -32,6 +32,9 @@ export const Contact5 = (props: Contact5Props) => {
   const [acceptTerms, setAcceptTerms] = useState<boolean | "indeterminate">(
     false
   );
+  const [yourPhoneNr, setYourPhoneNr] = useState("");
+  const [childsName, setChildsName] = useState("");
+  const [childsDOB, setChildsDOB] = useState("");
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -41,6 +44,9 @@ export const Contact5 = (props: Contact5Props) => {
       Name: ${nameInput}
       Email: ${emailInput}
       Message: ${messageInput}
+      Childs Name: ${childsName}
+      Childs DOB: ${childsDOB}
+      Your Phone Nr: ${yourPhoneNr}
     `;
 
     const mailtoLink = `mailto:hello@hinterlandweb.com?subject=${encodeURIComponent(
@@ -84,7 +90,7 @@ export const Contact5 = (props: Contact5Props) => {
         >
           <div className="grid w-full items-center">
             <Label htmlFor="name" className="mb-2">
-              Name
+              Your Name
             </Label>
             <Input
               type="text"
@@ -93,19 +99,54 @@ export const Contact5 = (props: Contact5Props) => {
               onChange={(e) => setNameInput(e.target.value)}
             />
           </div>
-
-          <div className="grid w-full items-center">
-            <Label htmlFor="email" className="mb-2">
-              Email
-            </Label>
-            <Input
-              type="email"
-              id="email"
-              value={emailInput}
-              onChange={(e) => setEmailInput(e.target.value)}
-            />
+          <div className="grid grid-cols-2 gap-4">
+            <div className="grid w-full items-center">
+              <Label htmlFor="childsName" className="mb-2">
+                Your Child&apos;s Name
+              </Label>
+              <Input
+                type="text"
+                id="childsName"
+                value={childsName}
+                onChange={(e) => setChildsName(e.target.value)}
+              />
+            </div>
+            <div className="grid w-full items-center">
+              <Label htmlFor="childsDOB" className="mb-2">
+                Your Child&apos;s Date of Birth
+              </Label>
+              <Input
+                type="date"
+                id="childsDOB"
+                value={childsDOB}
+                onChange={(e) => setChildsDOB(e.target.value)}
+              />
+            </div>
           </div>
-
+          <div className="grid grid-cols-2 gap-4">
+            <div className="grid w-full items-center">
+              <Label htmlFor="email" className="mb-2">
+                Email
+              </Label>
+              <Input
+                type="email"
+                id="email"
+                value={emailInput}
+                onChange={(e) => setEmailInput(e.target.value)}
+              />
+            </div>
+            <div className="grid w-full items-center">
+              <Label htmlFor="yourPhoneNr" className="mb-2">
+                Your Phone Nr
+              </Label>
+              <Input
+                type="text"
+                id="yourPhoneNr"
+                value={yourPhoneNr}
+                onChange={(e) => setYourPhoneNr(e.target.value)}
+              />
+            </div>
+          </div>
           <div className="grid w-full items-center">
             <Label htmlFor="message" className="mb-2">
               Message
@@ -134,12 +175,11 @@ export const Contact5 = (props: Contact5Props) => {
                 rel="noopener noreferrer"
               >
                 Terms.
-              </Link>
-              {" "}Clicking the button will forward you to your inbox first.
+              </Link>{" "}
+              Clicking the button will forward you to your inbox first.
             </Label>
           </div>
           <div>
-            
             <Button
               variant={button.variant}
               size={button.size}
