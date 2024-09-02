@@ -25,7 +25,7 @@ export const Layout229 = (props: Layout229Props) => {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
       <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-        <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+        <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
           Meet our Educators
         </h2>
         {/* <p className="md:text-md">Hello2</p> */}
@@ -49,7 +49,7 @@ export const Layout229 = (props: Layout229Props) => {
               {section.heading}
             </h3>
             <p>{section.description}</p>
-            <div className="mt-6 flex items-center gap-4 md:mt-8">
+            {/* <div className="mt-6 flex items-center gap-4 md:mt-8">
               {section.buttons.map((button, index) => (
                 <Button
                   key={`${button.title}-${index}`}
@@ -61,7 +61,7 @@ export const Layout229 = (props: Layout229Props) => {
                   {button.title}
                 </Button>
               ))}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

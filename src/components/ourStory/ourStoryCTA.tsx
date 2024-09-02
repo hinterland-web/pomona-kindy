@@ -23,7 +23,7 @@ export const Cta7 = (props: Cta7Props) => {
   } as Props;
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
-      <div className="bg-base-300 text-base-cta-primary px-[5%] py-10 md:py-24 lg:py-12 md:px-[10%] lg:px-[20%] container flex w-full flex-col items-center justify-between gap-6 md:grid-cols-[1fr_max-content] md:gap-x-12 md:gap-y-8 lg:gap-x-20">
+      <div className="bg-base-300 text-base-cta-primary rounded-lg px-[5%] py-10 md:py-24 lg:py-12 md:px-[10%] lg:px-[20%] container flex w-full flex-col items-center justify-between gap-6 md:grid-cols-[1fr_max-content] md:gap-x-12 md:gap-y-8 lg:gap-x-20">
         <div className="md:mr-12 lg:mr-0 text-center">
           <div className="w-full max-w-lg">
             <h2 className="mb-3 text-6xl font-bold leading-[1.2] md:mb-4 md:text-6xl lg:text-6xl">
