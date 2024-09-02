@@ -288,7 +288,7 @@ export const Navbar1Defaults: Navbar1Props = {
         { title: "Incursions & Excursions", url: "/facilities/excursions" },
       ],
     },
-    { title: "Enrolment & Fees", url: "" },
+    { title: "Enrolment & Fees", url: "/enrolment" },
     { title: "Getting Involved", url: "#" },
     { title: "FAQ", url: "/faq" },
   ],

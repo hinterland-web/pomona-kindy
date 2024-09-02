@@ -174,7 +174,7 @@ export const Layout423Defaults: Layout423Props = {
       description:
         "Our Kindergarten is a Safe, Inclusive, and Welcoming Natural Learning Environment for Children and Families",
       image: {
-        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-outside.png",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-outside-playground2.jpg",
         alt: "pomona kindy activities",
       },
       button: {
@@ -190,7 +190,7 @@ export const Layout423Defaults: Layout423Props = {
       description:
         "Kindergartens are incredibly important in the education and care of the children in the community. And so is the commitment and dedication of the Volunteer Management Committee.",
       image: {
-        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-children-playing.png",
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-outside-sandpit2.jpg",
         alt: "Placeholder image 3",
       },
       button: {

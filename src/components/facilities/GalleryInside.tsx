@@ -48,10 +48,10 @@ export const Gallery8 = (props: Gallery8Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
-          <p className="md:text-md">{description}</p>
+          <p className="text-lg">{description}</p>
         </div>
 
         <div className="gap-x-8 md:columns-2">
@@ -71,8 +71,10 @@ export const Gallery8 = (props: Gallery8Props) => {
                   src={image.src}
                   alt={image.alt || "default alt text"}
                   className="absolute inset-0 size-full object-cover"
-                  width={100}
-                  height={100}
+                  width={800}
+                  height={800}
+                  priority
+                  sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
             </a>

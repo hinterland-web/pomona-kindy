@@ -27,40 +27,43 @@ export const Testimonial3 = (props: Testimonial3Props) => {
     ...props,
   } as Props;
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
-      <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-            {heading}
-          </h1>
-          <p className="md:text-md">{description}</p>
-        </div>
-        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={`${testimonial.testimonial}-${index}`}
-              className="flex flex-col items-center text-center"
-            >
-              <blockquote
-                className={`my-6 text-md font-bold leading-[1.4] before:content-['"'] after:content-['"'] md:my-8 md:text-xl`}
+    <section className="relative px-[5%] py-16 md:py-24 lg:py-28 bg-cover bg-center bg-no-repeat text-base-white" style={{ backgroundImage: "url('https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-inside-paintings.JPG')" }}>
+      <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay for opacity */}
+      <div className="relative z-10"> {/* Ensure text is above the overlay */}
+        <div className="container">
+          <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
+            <h1 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
+              {heading}
+            </h1>
+            <p className="md:text-md">{description}</p>
+          </div>
+          <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={`${testimonial.testimonial}-${index}`}
+                className="flex flex-col items-center text-center"
               >
-                {testimonial.testimonial}
-              </blockquote>
-              {/* <Image
-                src={testimonial.avatar.src}
-                alt={testimonial.avatar.alt || "default alt text"}
-                className={`mb-4 size-24 min-h-14 min-w-14 rounded-full object-cover ${
-                  testimonial.name === "Brodie H." ? "object-[center_90%]" : ""
-                }`}
-                width={80}
-                height={80}
-              /> */}
-              <p className="font-semibold">{testimonial.name}</p>
-              {/* <p>
-                <span>{testimonial.position}</span><span>{testimonial.companyName}</span>
-              </p> */}
-            </div>
-          ))}
+                <blockquote
+                  className={`my-6 text-md font-bold leading-[1.4] before:content-['"'] after:content-['"'] md:my-8 md:text-xl`}
+                >
+                  {testimonial.testimonial}
+                </blockquote>
+                {/* <Image
+                  src={testimonial.avatar.src}
+                  alt={testimonial.avatar.alt || "default alt text"}
+                  className={`mb-4 size-24 min-h-14 min-w-14 rounded-full object-cover ${
+                    testimonial.name === "Brodie H." ? "object-[center_90%]" : ""
+                  }`}
+                  width={80}
+                  height={80}
+                /> */}
+                <p className="font-semibold">{testimonial.name}</p>
+                {/* <p>
+                  <span>{testimonial.position}</span><span>{testimonial.companyName}</span>
+                </p> */}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

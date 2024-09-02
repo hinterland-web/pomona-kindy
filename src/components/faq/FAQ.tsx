@@ -48,7 +48,7 @@ export const Faq4 = (props: Faq4Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
       <div className="container mx-auto max-w-lg">
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
           <p className="md:text-md">{description}</p>

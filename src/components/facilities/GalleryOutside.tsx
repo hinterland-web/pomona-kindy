@@ -53,10 +53,10 @@ export const Gallery10 = (props: Gallery10Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
-          <p className="md:text-md">{description}</p>
+          <p className="text-lg">{description}</p>
         </div>
         <div className="gap-8 space-y-8 md:columns-3">
           {images.map((image, index) => (
