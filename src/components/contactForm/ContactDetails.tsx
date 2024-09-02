@@ -35,7 +35,7 @@ export const Contact24 = (props: Contact24Props) => {
           <h2 className="rb-5 mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
-          <p className="md:text-md">{description}</p>
+          <p className="text-lg">{description}</p>
         </div>
         <div className="grid grid-cols-1 items-start justify-start gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-16 lg:grid-cols-4">
           {contacts.map((contact, index) => (
@@ -44,7 +44,8 @@ export const Contact24 = (props: Contact24Props) => {
               <h3 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
                 {contact.title}
               </h3>
-              <p className="mb-5 md:mb-6">{contact.description}</p>
+              <p className="mb-5 md:mb-6 text-md">{contact.description}</p>
+
               <a className="underline" href={contact.link.url}>
                 {contact.link.label}
               </a>
@@ -69,10 +70,10 @@ export const Contact24Defaults: Contact24Props = {
         "Make sure to add your phone number, your child's name and your child's date of birth to ensure we can process your enquiry as quickly as possible.",
       link: {
         label: "admin@pomonakindy.com.au",
-        url: "mailto:admin@pomonakindy.com.au",
+        url: "mailto:admin@pomonakindy.com.au?subject=Inquiry via your website&body=Phone: %0D%0AChild's Name: %0D%0AChild's Date of Birth:",
       },
     },
-    
+
     {
       icon: <BiPhone className="size-12" />,
       title: "Phone",
