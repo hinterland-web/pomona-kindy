@@ -208,3 +208,53 @@ export const Contact5Defaults: Contact5Props = {
 };
 
 Contact5.displayName = "Contact5";
+
+
+/*
+
+---> ADD MAILJET AFTER WEBSITE TRANSFER
+
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const data = {
+      Messages: [
+        {
+          From: {
+            Email: emailInput, // Sender's email
+            Name: nameInput, // Sender's name
+          },
+          To: [
+            {
+              Email: "your-mailjet-receiver@example.com", // Replace with your Mailjet receiver email
+              Name: "Receiver Name", // Optional
+            },
+          ],
+          Subject: "New Contact Form Submission",
+          TextPart: messageInput,
+        },
+      ],
+    };
+
+    try {
+      const response = await fetch("https://api.mailjet.com/v3/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Basic " + btoa("your-mailjet-api-key:your-mailjet-secret-key"), // Replace with your Mailjet API key and secret
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      // Optionally, handle success (e.g., show a success message)
+    } catch (error) {
+      console.error("Error sending message:", error);
+      // Optionally, handle error (e.g., show an error message)
+    }
+  };
+
+*/
