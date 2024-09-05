@@ -126,7 +126,7 @@ export const Footer2 = (props: Footer2Props) => {
               </div>
             </div>
           </div>
-          <p className="text-lg font-bold">{acknowledgements}</p>
+          <p className="text-md">{acknowledgements}</p>
 
           <div className="flex flex-row items-center justify-start gap-5">
             {logos.map((logo, index) => (

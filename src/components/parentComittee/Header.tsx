@@ -22,7 +22,7 @@ export const Content2 = (props: Content2Props) => {
     ...props,
   } as Props;
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28 ">
       <div className="container">
         <div className="grid grid-cols-1 items-start gap-y-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
           <div className="mt-10">
@@ -37,10 +37,10 @@ export const Content2 = (props: Content2Props) => {
             />
           </div>
           <div>
-            <h2 className="mb-5  font-bold md:mb-6 md:text-7xl lg:text-5xl">
+            <h2 className="mb-5 font-black md:mb-6 md:text-7xl lg:text-5xl">
               {heading}
             </h2>
-            <div className="prose">{children}</div>
+            <div className="prose text-lg">{children}</div>
           </div>
         </div>
       </div>

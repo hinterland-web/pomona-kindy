@@ -46,7 +46,7 @@ export default function Curriculum(props: CurriculumProps) {
       </div>
 
       <div className="container mt-10">
-        <div className="mx-auto w-full max-w-lg">
+        <div className="mx-auto w-full max-w-lg p-4 md:p-0">
           <h2 className="mb-5 text-4xl font-black md:mb-6">{playBased}</h2>
           <div className="prose text-lg">{children2}</div>
         </div>
@@ -65,7 +65,7 @@ export default function Curriculum(props: CurriculumProps) {
       </div> */}
 
       <div className="container mt-10">
-        <div className="mx-auto w-full max-w-lg">
+        <div className="mx-auto w-full max-w-lg p-4 md:p-0">
           <h2 className="mb-5 text-4xl font-black md:mb-6">{communicating}</h2>
           <div className="prose text-lg">{children3}</div>
         </div>

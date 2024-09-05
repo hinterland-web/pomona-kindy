@@ -1,6 +1,6 @@
 export default function Terms() {
   return (
-    <div className="container mx-auto px-4 py-8 ">
+    <div className="container mx-auto px-4 py-8 h-screen">
       <h1 className="text-3xl font-bold mb-6">C&K Affiliation and Policies</h1>
       <div className="prose max-w-none">
         <h2 className="text-2xl font-bold mt-6 mb-4 ">Affiliation</h2>

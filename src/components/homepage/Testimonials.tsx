@@ -95,7 +95,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
         alt: "",
       },
       testimonial:
-        "We initially decided against kindy this year as we will be homeschoolong next year, but we popped in on their opening day and changed our mind straight away! The staff were so welcoming and we loved that it feels like a big community. Not only is our daughter loving it, but we have been lucky enough to make some great friends through kindy too. Would highly recommend!",
+        "We initially decided against kindy this year as we will be homeschoolong next year, but we popped in on their opening day and changed our mind straight away! The staff were so welcoming and we loved that it feels like a big community.",
       avatar: {
         src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1931%20Brodie.jpeg",
         alt: "Testimonial avatar 1",
@@ -110,12 +110,42 @@ export const Testimonial3Defaults: Testimonial3Props = {
         alt: "",
       },
       testimonial:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+        "Such a beautiful kindy. Renae, Kirsty & Tash are amazing, kind & nurturing. My daughter loved her time here and the community feel. Thank you!",
       avatar: {
         src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
         alt: "Testimonial avatar 1",
       },
-      name: "Sarah B.",
+      name: "Stacey L.",
+      position: "",
+      companyName: "",
+    },
+    {
+      image: {
+        src: "",
+        alt: "",
+      },
+      testimonial:
+        "Wonderful inclusive kindergarten with lovely caring staff. I love this kindy so much!!",
+      avatar: {
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
+        alt: "Testimonial avatar 1",
+      },
+      name: "Stacey L.",
+      position: "",
+      companyName: "",
+    },
+    {
+      image: {
+        src: "",
+        alt: "",
+      },
+      testimonial:
+        "Fantastic kindy, we are thrilled to have a spot. The teachers are wonderful and genuinely really care about the wellbeing of the children! Can highly recommend!",
+      avatar: {
+        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
+        alt: "Testimonial avatar 1",
+      },
+      name: "Raini P.",
       position: "",
       companyName: "",
     },

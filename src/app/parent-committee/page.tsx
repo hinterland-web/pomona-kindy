@@ -7,10 +7,13 @@ import { Cta7 } from "@/components/parentComittee/CTA";
 
 export default function ParentCommittee() {
   return (
-    <div className="bg-base-white text-base-400">
-      <Content2 />
-      <Testimonial3 />
-      {/* <Cta7 /> */}
+    <div className="relative text-base-400">
+      <div className="absolute inset-0 bg-gradient-primary"></div>
+      <div className="relative z-10">
+        <Content2 />
+        <Testimonial3 />
+        {/* <Cta7 /> */}
+      </div>
     </div>
   );
 }

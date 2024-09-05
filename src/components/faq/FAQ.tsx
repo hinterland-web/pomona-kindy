@@ -45,7 +45,7 @@ export const Faq4 = (props: Faq4Props) => {
     "https://drive.google.com/file/d/1i-LFRk3Nmq8av_PuliLl1PBAZifPtua8/view?usp=sharing";
 
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container mx-auto max-w-lg">
         <div className="mb-12 text-center md:mb-18 lg:mb-20">
           <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
@@ -79,7 +79,7 @@ export const Faq4 = (props: Faq4Props) => {
         </Accordion>
 
         <div className="mx-auto mt-12 max-w-md text-center md:mt-18 lg:mt-20">
-          <h4 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl">
+          <h4 className="mb-3 text-2xl font-bold md:mb-4 md:text-3xl md:leading-[1.3] lg:text-4xl text-base-white">
             {footerHeading}
           </h4>
           <p className="md:text-md">

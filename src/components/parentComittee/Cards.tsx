@@ -31,10 +31,10 @@ export const Testimonial3 = (props: Testimonial3Props) => {
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-5xl">
+          <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-5xl">
             {heading}
           </h2>
-          <p className="md:text-md">{description}</p>
+          <p className="md:text-md text-lg">{description}</p>
         </div>
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-4 md:gap-x-8 lg:gap-x-12 lg:gap-y-16">
           {testimonials.map((testimonial, index) => (
@@ -46,7 +46,7 @@ export const Testimonial3 = (props: Testimonial3Props) => {
                 width={300}
                 height={300}
                 className={`mb-4 size-32 min-h-14 min-w-14 rounded-full object-cover ${
-                  testimonial.name === "Kristina" ? "object-[center_90%]" : ""
+                  testimonial.name === "Kristina" ? "object-[center_70%]" : ""
                 }`}
               />
               <p className="font-semibold">{testimonial.name}</p>
@@ -109,7 +109,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
       testimonial:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
       avatar: {
-        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1930%20Mel.jpeg",
+        src: "/Mel.jpeg",
         alt: "2024 Committee Secretary",
       },
       name: "Mel",

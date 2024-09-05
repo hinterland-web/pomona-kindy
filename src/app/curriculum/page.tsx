@@ -5,14 +5,16 @@ import Banner from "@/components/ui/Banner";
 
 export default function CurriculumPage() {
   return (
-    <div className=" bg-base-white text-base-400">
-      <Layout44 {...Layout44Defaults}/>
-      <Curriculum />
-      <div className="my-10">
-        <Banner />
+    <div className="relative text-base-400">
+      <div className="absolute inset-0 bg-gradient-primary"></div>
+      <div className="relative z-10">
+        <Layout44 {...Layout44Defaults} />
+        <Curriculum />
+          <div className="my-10">
+          <Banner />
+        </div>
+        <Cta7 {...Cta7Defaults} />
       </div>
-      <Cta7 {...Cta7Defaults} />
-      
     </div>
   );
 }

@@ -126,23 +126,26 @@ const config: Config = {
       fontFamily: {
         antonio: ["Mulish", "sans-serif"], // ensure font weights are loaded as necessary
       },
-
+      backgroundImage: {
+        "gradient-primary":
+          "linear-gradient(to bottom, #FCFCFA 0%, #C6E2B5 50%, #A9B27A 100%)",
+      },
       colors: {
         base: {
-          "white": "#FCFCFA",
-          "content": "#8D9854", // base-content for bg and H1
+          white: "#FCFCFA",
+          content: "#8D9854", // base-content for bg and H1
           "content-secondary": "", // to create text hierarchy
           //CTA colors
           "cta-primary": "#D1D92C",
           // "cta-secondary": "#34C759",
           "cta-secondary": "#BFC712",
           // expand palette to contrast well with base content and with similar hue
-          100: "",
+          100: "#C6E2B5", // a light green shade for base-100
+
           200: "#A9B27A",
           300: "#79814F",
-          400: "#636B35"
+          400: "#636B35",
         },
-        
       },
     },
   },
