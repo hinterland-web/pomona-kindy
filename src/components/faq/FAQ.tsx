@@ -164,7 +164,7 @@ export const Faq4Defaults: Faq4Props = {
     {
       title: "What is the sun safety policy?",
       answer:
-        "We are a SunSafe Kindy. Children’s shirts should have sleeves (no singlets, please) and a hat when outdoors. Please bring 2-3 spare sets of play clothing (including underwear) as playtime at Kindy can sometimes get messy!Sun safety is important, and we ask that your child comes to the centre with a legionnaire-style or broad-brimmed hat each day. Apply sunscreen to your child at home or immediately upon arrival at the centre, and record this application on the sunscreen register. Teachers/educators will reapply sunscreen as needed.",
+        "We are a Sun Safe Kindy. Children’s shirts should have sleeves (no singlets, please) and a hat when outdoors. Please bring 2-3 spare sets of play clothing (including underwear) as playtime at Kindy can sometimes get messy! Sun safety is important, and we ask that your child comes to the centre with a legionnaire-style or broad-brimmed hat each day. Apply sunscreen to your child at home or immediately upon arrival at the centre, and record this application on the sunscreen register. Teachers/educators will reapply sunscreen as needed.",
     },
     {
       title: "How are diverse learning needs and medical conditions managed?",
@@ -186,7 +186,7 @@ export const Faq4Defaults: Faq4Props = {
     {
       title: "Is there a uniform?",
       answer:
-        "No, we do not enforce a uniform. However,We have Hats and T Shirts available for purchase, these are not mandatory. Hats $15, T-Shirts $20. Payment can be either cash or bank transfer. ",
+        "No, we do not enforce a uniform. However, we have hats and T-shirts available for purchase, these are not mandatory. Hats $15, T-shirts $20. Payment can be either cash or bank transfer. ",
     },
   ],
   footerHeading: "Still have questions?",

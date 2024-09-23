@@ -77,7 +77,7 @@ export const Content1Defaults: Content1Props = {
       </p>
       <p>
         Your child&apos;s learning journey is shared with you via conversations
-        between you and our ducators and through written documentation in our
+        between you and our educators and through written documentation in our
         centre.
       </p>
     </div>

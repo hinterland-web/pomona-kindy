@@ -25,7 +25,7 @@ export const Layout44 = (props: Layout44Props) => {
         <h3 className="mb-5 text-4xl font-black leading-[1.2] text-base-cta-primary md:mb-6 md:text-5xl lg:text-6xl">
           {heading}
         </h3>
-        <p className="text-base text-text-alternative md:text-md">
+        <p className="text-base-white md:text-lg">
           {description}
         </p>
       </div>
@@ -46,7 +46,7 @@ export const Layout44 = (props: Layout44Props) => {
 export const Layout44Defaults: Layout44Props = {
   heading: "Establishing a love of life-long learning",
   description:
-    "Our passionate teachers and teaching assistants are highly qualified and experienced. They are experts in teaching children from three to five years. Our purpose-built building and expansive outdoor play spaces are designed to nurture children’s development in a caring community environment.",
+    "Our educators are dedicated professionals with extensive experience in early childhood education. They are experts in nurturing and guiding children aged three to five, demonstrating consistency, harmony, and sensitivity in their approach. Our purpose-built facility and spacious outdoor areas are designed to foster holistic development within a supportive community setting. All staff members hold current qualifications in pediatric first aid, including CPR, asthma management, and anaphylaxis response.",
   image: {
     src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-outside.png",
     alt: "pomona kindy playground",

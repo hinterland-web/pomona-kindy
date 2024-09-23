@@ -238,7 +238,7 @@ export const Footer2Defaults: Footer2Props = {
   ],
   footerText: " © 2024 All rights reserved.",
   acknowledgements:
-    "Pomona & District Community Kindergarten acknowledges the Gubbi Gubbi/ Kabi Kabi peoples as the Traditional Owners of the Country we live, learn and work on and recognise their continuing connection to lands, waters and communities. We pay our respect to Elders, past and present. ",
+    "Pomona & District Community Kindergarten acknowledges the Gubbi Gubbi/ Kabi Kabi peoples as the Traditional Owners of the Country we live, learn and work on. We recognise their continuing connection to lands, waters and communities. We pay our respect to Elders, past and present. ",
   logos: [
     {
       src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/CK-logo_lsc_with-tag_rgb_hr.png",

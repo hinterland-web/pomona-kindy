@@ -62,7 +62,7 @@ export const Contact24Defaults: Contact24Props = {
   tagline: "We are here to help",
   heading: "Get in Touch",
   description:
-    "We’re here to answer your questions, provide information, and assist you in any way we can. Whether you’re a prospective parent interested in enrolling your child or a valued member of our community, your feedback, inquiries, and suggestions are important to us. Feel free to reach out using the form below.",
+    "We’re here to answer your questions, provide information, and assist you in any way we can. Whether you’re a prospective parent interested in enrolling your child or a valued member of our community, your feedback, enquiries, and suggestions are important to us. Feel free to reach out using the form below.",
   contacts: [
     {
       icon: <BiEnvelope className="size-12" />,
@@ -71,7 +71,7 @@ export const Contact24Defaults: Contact24Props = {
         "Make sure to add your phone number, your child's name and your child's date of birth to ensure we can process your enquiry as quickly as possible.",
       link: {
         label: "admin@pomonakindy.com.au",
-        url: "mailto:admin@pomonakindy.com.au?subject=Inquiry via your website&body=Phone: %0D%0AChild's Name: %0D%0AChild's Date of Birth:",
+        url: "mailto:admin@pomonakindy.com.au?subject=Enquiry via your website&body=Phone: %0D%0AChild's Name: %0D%0AChild's Date of Birth:",
       },
     },
 

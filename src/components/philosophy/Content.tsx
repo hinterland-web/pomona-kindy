@@ -28,7 +28,7 @@ export const Content9 = (props: Content9Props) => {
           <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
-          <p className="text-sm my-4">Last reviewed: 25 April 2024</p>
+          <p className="my-4">Last reviewed: 25 April 2024</p>
           <div className="prose text-lg">{children}</div>
         </div>
         <div className="mb-12 md:mb-18 lg:mb-20 mt-10">
@@ -73,7 +73,7 @@ export const Content9Defaults: Content9Props = {
         The uniqueness of each child and their cultural and familial
         understandings are celebrated and valued. Educators are advocates for
         the present and future rights of all children and use an environmentally
-        sustainable approach to learning and provides connections to community
+        sustainable approach to learning that provides connections to community
         and cultures. Time is spent developing respectful relationships with our
         kindergarten families and our local community around Pomona, knowing
         that these will lead to many positive outcomes for our children.
@@ -85,6 +85,7 @@ export const Content9Defaults: Content9Props = {
         and secure in the knowledge that we all belong at Pomona & District
         Kindergarten.
       </p>
+      
     </div>
   ),
   image: {

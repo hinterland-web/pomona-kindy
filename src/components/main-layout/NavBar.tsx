@@ -275,6 +275,7 @@ export const Navbar1Defaults: Navbar1Props = {
         { title: "Our Story", url: "/story" },
         { title: "Teachers", url: "/teachers" },
         { title: "Philosophy", url: "/philosophy" },
+        { title: "Curriculum", url: "/curriculum" },
         { title: "Parent Committee", url: "/parent-committee" },
       ],
     },
@@ -285,7 +286,7 @@ export const Navbar1Defaults: Navbar1Props = {
       subLinks: [
         { title: "Inside", url: "/facilities/inside" },
         { title: "Outside", url: "/facilities/outside" },
-        { title: "Incursions & Excursions", url: "/facilities/excursions" },
+        { title: "Incursions", url: "/facilities/incursions" },
       ],
     },
     { title: "Enrolment & Fees", url: "/enrolment" },
