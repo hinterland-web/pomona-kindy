@@ -171,11 +171,7 @@ export const Faq4Defaults: Faq4Props = {
       answer:
         "If your child has a diverse learning need or a medical condition, such as anaphylaxis, asthma, diabetes, or epilepsy, provide a current medical management plan signed by your child’s medical practitioner. Before your child starts, have a conversation with your centre about their needs. If specialised health procedures are needed, we will work with you to support this. If your child has an NDIS plan, you are welcome to share it with us.",
     },
-    {
-      title: "What are the exclusion periods for common illnesses?",
-      answer:
-        "The exclusion periods for common childhood illnesses are as follows: Chickenpox - until all blisters have dried, Conjunctivitis - until discharge stops, Diarrhoea - until no loose bowel motion for 24 hours, Fever - 24 hours after it stops without medication, Gastroenteritis - 24 to 48 hours after symptoms cease, Hand, foot, and mouth disease - until all blisters have dried, Head lice - not excluded if effective treatment begins before the next day, and other specific guidelines for other illnesses. For full details, refer to the National Health and Medical Research Council guidelines.",
-    },
+    
     {
       title:
         "What should I do if my child requires medication during their time at the centre?",

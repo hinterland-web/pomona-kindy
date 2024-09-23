@@ -14,13 +14,13 @@ const EnrollmentInfoLinks: React.FC = () => {
           Important information:
         </h2>
         <h3 className="text-lg font-bold">
-          Your child must be 4 years old by June 30th June in the year of
-          enrolment!
+          We are currently welcoming children who will have turned 4 by the 30th
+          of June in the year of enrollment.
         </h3>
 
         <ul className="px-4 list-disc space-y-2 text-md">
           <li>
-            Unsure if your child is eligible, check this{" "}
+            If you are unsure, please use this{" "}
             <Link
               className="font-bold hover:underline"
               href={calculatorLink}
@@ -30,8 +30,8 @@ const EnrollmentInfoLinks: React.FC = () => {
             </Link>
           </li>
           <li>
-            If you child is still no kindy age, you can still put down their
-            names on the waiting list. Just click the button below.
+            If your child does not yet meet our eligibility criteria please
+            click here to add them to our waitlist.
           </li>
         </ul>
         <div className="flex justify-center">

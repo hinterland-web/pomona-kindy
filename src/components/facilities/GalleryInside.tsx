@@ -20,7 +20,7 @@ const imageNames = [
   "pomona-kindy-inside-crafts.JPG",
   "pomona-kindy-inside-dream-catcher.JPG",
   "pomona-kindy-inside-hall.JPG",
-  "pomona-kindy-inside-library.jpg",
+  
   "pomona-kindy-inside-paintings.JPG",
   "pomona-kindy-inside-play-sunlight.JPG",
   "pomona-kindy-inside-play.JPG",
