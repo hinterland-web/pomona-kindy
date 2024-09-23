@@ -32,7 +32,7 @@ export const Contact24 = (props: Contact24Props) => {
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="rb-12 mb-12 max-w-lg md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
+          <p className="mb-3 text-lg font-semibold md:mb-4">{tagline}</p>
           <h2 className="rb-5 mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>

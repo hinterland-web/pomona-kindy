@@ -23,7 +23,7 @@ export const Layout229 = (props: Layout229Props) => {
   const { sections } = { ...props, ...Layout229Defaults };
 
   return (
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 bg-base-white text-base-400">
+    <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
         <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
           Meet our Educators

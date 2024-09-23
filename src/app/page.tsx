@@ -6,6 +6,10 @@ import {
   Testimonial3,
   Testimonial3Defaults,
 } from "../components/homepage/Testimonials";
+import {
+  Testimonial27,
+  Testimonial27Defaults,
+} from "../components/homepage/Testimonials2";
 import Banner from "@/components/ui/Banner";
 
 export default function Home() {
@@ -16,7 +20,8 @@ export default function Home() {
      
       <Layout423 {...Layout423Defaults} />
       <Layout77 {...Layout77Defaults} />
-      <Testimonial3 {...Testimonial3Defaults} />
+      {/* <Testimonial3 {...Testimonial3Defaults} /> */}
+      <Testimonial27 {...Testimonial27Defaults} />
     </div>
   );
 }

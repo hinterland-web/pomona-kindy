@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@relume_io/relume-ui";
+import Image from "next/image";
 
 type ImageProps = {
   src: string;
@@ -33,7 +34,8 @@ type Props = {
   testimonials: Testimonial[];
 };
 
-export type Testimonial27Props = React.ComponentPropsWithoutRef<"section"> & Partial<Props>;
+export type Testimonial27Props = React.ComponentPropsWithoutRef<"section"> &
+  Partial<Props>;
 
 export const Testimonial27 = (props: Testimonial27Props) => {
   const { heading, description, testimonials } = {
@@ -54,11 +56,17 @@ export const Testimonial27 = (props: Testimonial27Props) => {
     });
   }, [api]);
 
+  const imageUrl = "/pomona-kindy-inside-paintings.webp";
+
   return (
-    <section id="relume" className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28">
+    <section
+      id="relume"
+      className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28 bg-cover bg-center bg-no-repeat text-base-white"
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    >
       <div className="container">
         <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <h2 className="rb-5 mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h2 className="rb-5 mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
             {heading}
           </h2>
           <p className="md:text-md">{description}</p>
@@ -88,10 +96,13 @@ export const Testimonial27 = (props: Testimonial27Props) => {
               <button
                 key={index}
                 onClick={() => api?.scrollTo(index)}
-                className={clsx("relative mx-[3px] inline-block size-2 rounded-full", {
-                  "bg-black": current === index + 1,
-                  "bg-neutral-darker/40": current !== index + 1,
-                })}
+                className={clsx(
+                  "relative mx-[3px] inline-block size-2 rounded-full",
+                  {
+                    "bg-black": current === index + 1,
+                    "bg-neutral-darker/40": current !== index + 1,
+                  }
+                )}
               />
             ))}
           </div>
@@ -103,7 +114,7 @@ export const Testimonial27 = (props: Testimonial27Props) => {
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
-    <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8">
+    <div className="flex w-full flex-col items-start justify-between border border-border-primary p-6 md:p-8 bg-base-100 text-base-400">
       <div className="rb-5 mb-5 md:mb-6">
         <div className="rb-6 mb-6 flex items-center">
           {Array(testimonial.numberOfStars)
@@ -115,16 +126,18 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
         <blockquote className="md:text-md">{testimonial.quote}</blockquote>
       </div>
       <div className="flex w-full flex-col items-start gap-4 md:w-auto md:flex-row md:items-center">
-        <img
+        {/* <Image
           src={testimonial.avatar.src}
           alt={testimonial.avatar.alt}
+          width={100}
+          height={100}
           className="size-12 min-h-12 min-w-12 rounded-full object-cover"
-        />
+        /> */}
         <div>
           <p className="font-semibold">{testimonial.name}</p>
-          <p>
+          {/* <p>
             {testimonial.position}, {testimonial.companyName}
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
@@ -132,56 +145,68 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 };
 
 export const Testimonial27Defaults: Testimonial27Props = {
-  heading: "Customer testimonials",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  heading: "What our Families Say",
+  description: "",
   testimonials: [
     {
       numberOfStars: 5,
       quote:
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."',
+        "It's rare to find a space that incorporate so well into its surrounding nature as is the case at the Pomona Kindy. It feels like the kids are always involved in adventures of discovery and purposeful play.",
       avatar: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+        src: "",
         alt: "Testimonial avatar 1",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
+      name: "Andre S.",
+      position: "",
+      companyName: "",
     },
     {
       numberOfStars: 5,
       quote:
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."',
+        "We initially decided against kindy this year as we will be homeschoolong next year, but we popped in on their opening day and changed our mind straight away! The staff were so welcoming and we loved that it feels like a big community.",
       avatar: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+        src: "",
         alt: "Testimonial avatar 2",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
+      name: "Brodie H.",
+      position: "",
+      companyName: "",
     },
     {
       numberOfStars: 5,
       quote:
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."',
+        "Such a beautiful kindy. Renae, Kirsty & Tash are amazing, kind & nurturing. My daughter loved her time here and the community feel. Thank you!",
       avatar: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+        src: "",
         alt: "Testimonial avatar 3",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
+      name: "Stacey L.",
+      position: "",
+      companyName: "",
     },
     {
       numberOfStars: 5,
       quote:
-        '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."',
+        "Wonderful inclusive kindergarten with lovely caring staff. I love this kindy so much!!",
       avatar: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+        src: "",
         alt: "Testimonial avatar 4",
       },
-      name: "Name Surname",
-      position: "Position",
-      companyName: "Company name",
+      name: "Dyneea H.",
+      position: "",
+      companyName: "",
+    },
+    {
+      numberOfStars: 5,
+      quote:
+        "Fantastic kindy, we are thrilled to have a spot. The teachers are wonderful and genuinely really care about the wellbeing of the children! Can highly recommend!",
+      avatar: {
+        src: "",
+        alt: "Testimonial avatar 5",
+      },
+      name: "Raini P.",
+      position: "",
+      companyName: "",
     },
   ],
 };

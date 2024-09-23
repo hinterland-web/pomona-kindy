@@ -26,8 +26,10 @@ export const Testimonial3 = (props: Testimonial3Props) => {
     ...Testimonial3Defaults,
     ...props,
   } as Props;
+  
+  const imageUrl = "/pomona-kindy-inside-paintings.webp";
   return (
-    <section className="relative px-[5%] py-16 md:py-24 lg:py-28 bg-cover bg-center bg-no-repeat text-base-white" style={{ backgroundImage: "url('https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-inside-paintings.JPG')" }}>
+    <section className="relative px-[5%] py-16 md:py-24 lg:py-28 bg-cover bg-center bg-no-repeat text-base-white" style={{ backgroundImage: `url(${imageUrl})` }}>
       <div className="absolute inset-0 bg-black opacity-50"></div> {/* Overlay for opacity */}
       <div className="relative z-10"> {/* Ensure text is above the overlay */}
         <div className="container">

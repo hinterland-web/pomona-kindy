@@ -129,6 +129,8 @@ const config: Config = {
       backgroundImage: {
         "gradient-primary":
           "linear-gradient(to bottom, #FCFCFA 0%, #C6E2B5 50%, #A9B27A 100%)",
+        "gradient-secondary":
+          "linear-gradient(to bottom, #FCFCFA 0%, #C6E2B5 100%)",
       },
       colors: {
         base: {
