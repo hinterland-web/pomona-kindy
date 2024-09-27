@@ -1,7 +1,7 @@
 import { Content1 } from "./OurEnvironment";
 import { Content2 } from "./OurHistory";
 import { Content3 } from "./OurCurriculum";
-import { Cta7 } from "./ourStoryCTA";
+import { Cta7 } from "./OurStoryCTA";
 import { Header64 } from "../ui/PageHeader";
 
 export default function OurStoryPage() {

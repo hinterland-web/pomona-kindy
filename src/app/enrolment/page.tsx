@@ -1,6 +1,6 @@
 import { Content7 } from "@/components/enrolment/Enrolment";
 import { Content8 } from "@/components/enrolment/Fees";
-import { Cta7 } from "@/components/ourStory/ourStoryCTA";
+import { Cta7 } from "@/components/ourStory/OurStoryCTA";
 
 export default function Enrolment() {
   return (
