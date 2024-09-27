@@ -6,6 +6,7 @@ import EnrollmentInfoLinks from "../ui/EnrollmentInfoLinks";
 import KindyAgeModal from "../ui/KindyAgeModal";
 import { useState } from "react";
 
+
 type Props = {
   heading: string;
   description: string;
