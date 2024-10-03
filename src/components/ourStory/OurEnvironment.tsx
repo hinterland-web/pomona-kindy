@@ -1,4 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import Cookies from "js-cookie";
+import { useEffect, useState } from "react";
+import { createClient, OAuthStrategy } from "@wix/sdk";
+import { items } from "@wix/data";
+
+// Define an interface for your data structure
+interface EnvironmentData {
+  title: string;
+  text: string;
+}
 
 type ImageProps = {
   src: string;
@@ -16,11 +28,52 @@ type Props = {
 export type Content1Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
+const myWixClient = createClient({
+  modules: { items },
+  auth: OAuthStrategy({
+    clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID,
+    tokens: JSON.parse(Cookies.get("session") || null),
+  }),
+});
+
 export const Content1 = (props: Content1Props) => {
   const { heading, children, image } = {
     ...Content1Defaults,
     ...props,
   } as Props;
+
+  // Update the state to use the new interface
+  const [data, setData] = useState<EnvironmentData | null>(null);
+
+  async function fetchData() {
+    try {
+      const result = await myWixClient.items
+        .queryDataItems({
+          dataCollectionId: "OurEnvironment",
+        })
+        .ascending("createdOn")
+        .find();
+      
+      // Assuming the first item in the result is the one we want
+      if (result.items.length > 0) {
+        const item = result.items[1];
+        setData({
+          title: item.data.title,
+          text: item.data.text
+        });
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  // Remove the console.log and use the data in your JSX
+  // to render wix title: {data ? data.title : heading}
+  // 
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28 ">
       <div className="container">
@@ -28,8 +81,11 @@ export const Content1 = (props: Content1Props) => {
           <div>
             <h2 className="mb-5 text-5xl font-black md:mb-6 md:text-7xl lg:text-8xl">
               {heading}
+              
             </h2>
-            <div className="prose text-lg">{children}</div>
+            <div className="prose text-lg">
+              {children}
+            </div>
           </div>
           <div className="relative aspect-[5/4] w-full">
             <Image
@@ -58,8 +114,9 @@ export const Content1Defaults: Content1Props = {
         nurture their curiosity.
       </p>
       <p>
-        We recently received a nature-inspired playground, crafted
-        with care by Bespoke Playgrounds in 2023, with generous support of FRRR and Community Gambling Benefit Fund grants. This enchanting addition offered our
+        We recently received a nature-inspired playground, crafted with care by
+        Bespoke Playgrounds in 2023, with generous support of FRRR and Community
+        Gambling Benefit Fund grants. This enchanting addition offered our
         children the opportunity to immerse themselves in the wonders of the
         natural world right here at our kindergarten. From climbing to
         exploring, digging, and discovering, this playground was designed to
