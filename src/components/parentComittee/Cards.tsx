@@ -40,7 +40,7 @@ export const Testimonial3 = (props: Testimonial3Props) => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="flex flex-col items-center text-center">
              
-              <Image
+              {/* <Image
                 src={testimonial.avatar.src}
                 alt={testimonial.avatar.alt || "default alt text"}
                 width={300}
@@ -48,8 +48,8 @@ export const Testimonial3 = (props: Testimonial3Props) => {
                 className={`mb-4 size-32 min-h-14 min-w-14 rounded-full object-cover ${
                   testimonial.name === "Kristina" ? "object-[center_70%]" : ""
                 }`}
-              />
-              <p className="font-semibold">{testimonial.name}</p>
+              /> */}
+              <p className="font-black text-xl">{testimonial.name}</p>
               <p>
                 <span>{testimonial.position}</span>{" "}
                 <span>{testimonial.companyName}</span>
@@ -79,7 +79,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
       },
       testimonial: "Say Something about what you want out of this",
       avatar: {
-        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1929%20Sarah.jpeg",
+        src: "",
         alt: "2024 Committee President",
       },
       name: "Sarah B.",
@@ -94,7 +94,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
       testimonial:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
       avatar: {
-        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1932%20Kristina.jpeg",
+        src: "",
         alt: "2024 Committee Vice President",
       },
       name: "Kristina R.",
@@ -109,7 +109,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
       testimonial:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
       avatar: {
-        src: "/Mel.jpeg",
+        src: "",
         alt: "2024 Committee Secretary",
       },
       name: "Mel",
@@ -124,7 +124,7 @@ export const Testimonial3Defaults: Testimonial3Props = {
       testimonial:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
       avatar: {
-        src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/IMG_1930%20Andre.jpeg",
+        src: "",
         alt: "2024 Committee Treasurer",
       },
       name: "André Silva",
