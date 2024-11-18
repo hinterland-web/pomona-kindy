@@ -56,7 +56,7 @@ export const Testimonial27 = (props: Testimonial27Props) => {
     });
   }, [api]);
 
-  const imageUrl = "/pomona-kindy-inside-paintings.webp";
+  const imageUrl = "https://pub-31971714d5324882b00b0345130560dd.r2.dev/pomona-kindy-inside-paintings.JPG";
 
   return (
     <section
