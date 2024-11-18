@@ -23,7 +23,8 @@ type Props = {
   images: ImageProps[];
 };
 
-export type Gallery15Props = React.ComponentPropsWithoutRef<"section"> & Partial<Props>;
+export type Gallery15Props = React.ComponentPropsWithoutRef<"section"> &
+  Partial<Props>;
 
 export const Gallery15 = (props: Gallery15Props) => {
   const { heading, description, images } = {
@@ -72,7 +73,6 @@ export const Gallery15 = (props: Gallery15Props) => {
                         src={image.src}
                         alt={image.alt || "default alt text"}
                         className="absolute inset-0 size-full object-cover"
-                        
                         fill={true}
                       />
                     </div>
@@ -87,10 +87,13 @@ export const Gallery15 = (props: Gallery15Props) => {
                 <button
                   key={index}
                   onClick={() => api?.scrollTo(index)}
-                  className={clsx("relative mx-[3px] inline-block size-2 rounded-full", {
-                    "bg-black": current === index + 1,
-                    "bg-neutral-darker/40": current !== index + 1,
-                  })}
+                  className={clsx(
+                    "relative mx-[3px] inline-block size-2 rounded-full",
+                    {
+                      "bg-black": current === index + 1,
+                      "bg-neutral-darker/40": current !== index + 1,
+                    }
+                  )}
                 />
               ))}
             </div>
@@ -106,27 +109,25 @@ export const Gallery15Defaults: Gallery15Props = {
   description: "",
   images: [
     {
-      src: "/incursions-firefighters.jpg",
+      src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/incursions-firefighters.jpg",
       alt: "Incursions Firefighters",
     },
     {
-      src: "/incursions-firefighters2.jpg",
+      src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/incursions-firefighters2.jpg",
       alt: "Incursions Firefighters 2",
     },
     {
-      src: "/incursions-Evergreen-Theatre-2024-01.jpg",
+      src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/incursions-Evergreen%20Theatre%202024%2001.jpg",
       alt: "Incursions Evergreen Theatre 2022",
     },
 
-
     {
-      src: "/incursions-Evergreen-Theatre-2022.jpg",
+      src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/incursions-%20Evergreen%20Theatre%202022.jpg",
       alt: "Incursions Evergreen Theatre 2022",
     },
-    
-    
+
     {
-      src: "/incursions-RhythmCultureAfricanDrumming.jpg",
+      src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/incursions-Rhythm%20Culture%20African%20Drumming.jpg",
       alt: "Incursions Rhythm Culture African Drumming",
     },
   ],
