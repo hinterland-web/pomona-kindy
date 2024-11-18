@@ -1,6 +1,6 @@
 import Curriculum from "@/components/curriculum/CurriculumPage";
 import {Layout44, Layout44Defaults} from "@/components/curriculum/CurriculumHeader";
-import {Cta7, Cta7Defaults} from "../components/ourStory/OurStoryCTA";
+import EnrolNowCTA from "@/components/CTA/EnrolNowCTA";
 import Banner from "@/components/ui/Banner";
 
 export default function CurriculumPage() {
@@ -13,7 +13,7 @@ export default function CurriculumPage() {
           <div className="my-10">
           <Banner />
         </div>
-        <Cta7 {...Cta7Defaults} />
+        <EnrolNowCTA />
       </div>
     </div>
   );

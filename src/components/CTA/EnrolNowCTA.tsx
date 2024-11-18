@@ -16,7 +16,7 @@ type Props = {
 export type Cta7Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
-export default function Cta7(props: Cta7Props) {
+export default function EnrolNowCTA (props: Cta7Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { heading, description, buttons } = {
     ...Cta7Defaults,
@@ -64,4 +64,4 @@ export const Cta7Defaults: Cta7Props = {
   buttons: [{ title: "Enrol Now", variant: "secondary" }],
 };
 
-Cta7.displayName = "Cta7";
+EnrolNowCTA.displayName = "EnrolNowCTA";
