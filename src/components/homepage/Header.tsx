@@ -95,7 +95,7 @@ export const Header5Defaults: Header5Props = {
   buttons: [{ title: "Enrol Now" }],
   // { title: "Button", variant: "secondary-alt" }],
   image: {
-    src: "/kindy-playground-hero.jpeg",
+    src: "https://pub-31971714d5324882b00b0345130560dd.r2.dev/kindy-playground-hero.png",
     alt: "Kindy-playground",
   },
 };

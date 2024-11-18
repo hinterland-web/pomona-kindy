@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Cookies from "js-cookie";
+//import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
-import { createClient, OAuthStrategy } from "@wix/sdk";
-import { items } from "@wix/data";
+//import { createClient, OAuthStrategy } from "@wix/sdk";
+//import { items } from "@wix/data";
 
 // Define an interface for your data structure
 interface EnvironmentData {
@@ -28,13 +28,13 @@ type Props = {
 export type Content1Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
-const myWixClient = createClient({
-  modules: { items },
-  auth: OAuthStrategy({
-    clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID,
-    tokens: JSON.parse(Cookies.get("session") || null),
-  }),
-});
+// const myWixClient = createClient({
+//   modules: { items },
+//   auth: OAuthStrategy({
+//     clientId: process.env.NEXT_PUBLIC_WIX_CLIENT_ID,
+//     tokens: JSON.parse(Cookies.get("session") || null),
+//   }),
+// });
 
 export const Content1 = (props: Content1Props) => {
   const { heading, children, image } = {
@@ -43,33 +43,33 @@ export const Content1 = (props: Content1Props) => {
   } as Props;
 
   // Update the state to use the new interface
-  const [data, setData] = useState<EnvironmentData | null>(null);
+  // const [data, setData] = useState<EnvironmentData | null>(null);
 
-  async function fetchData() {
-    try {
-      const result = await myWixClient.items
-        .queryDataItems({
-          dataCollectionId: "OurEnvironment",
-        })
-        .ascending("createdOn")
-        .find();
+  // async function fetchData() {
+  //   try {
+  //     const result = await myWixClient.items
+  //       .queryDataItems({
+  //         dataCollectionId: "OurEnvironment",
+  //       })
+  //       .ascending("createdOn")
+  //       .find();
       
-      // Assuming the first item in the result is the one we want
-      if (result.items.length > 0) {
-        const item = result.items[1];
-        setData({
-          title: item.data.title,
-          text: item.data.text
-        });
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
+  //     // Assuming the first item in the result is the one we want
+  //     if (result.items.length > 0) {
+  //       const item = result.items[1];
+  //       setData({
+  //         title: item.data.title,
+  //         text: item.data.text
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // }
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   // Remove the console.log and use the data in your JSX
   // to render wix title: {data ? data.title : heading}
