@@ -16,7 +16,7 @@ type Props = {
 export type Cta7Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
-export const Cta7 = (props: Cta7Props) => {
+export default function Cta7(props: Cta7Props) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { heading, description, buttons } = {
     ...Cta7Defaults,
